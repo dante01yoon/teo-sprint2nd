@@ -1,15 +1,13 @@
 .card_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(292px, 1fr));
+  gap: 24px;
+  padding: 24px;
 }
 
 .card_container {
-  width: 292px;
   background-color: #fff;
   cursor: pointer;
-  margin: 6px 0;
   transition: all 0.3s ease-in-out;
 
   &:hover {
@@ -61,6 +59,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }

@@ -9,9 +9,9 @@
 
 .button_container {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   overflow-x: auto;
-  padding-bottom: 20px;
+  padding: 24px;
 }
 
 .button {
@@ -24,11 +24,11 @@
   border-radius: 2px;
   cursor: pointer;
   flex: 0 0 auto;
+}
 
-  &:focus {
-    color: #096DD9;
-    border: 1px solid #096DD9;  
-  }
+.button_pressed {
+  color: #096DD9;
+  border: 1px solid #096DD9;  
 }
 
 .divider {
