@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from "react";
+import { FC, HTMLAttributes, useCallback, useEffect, useMemo, useState } from "react";
 import StackCard, { StackCardProps } from "../../components/cards/StackCard";
 
 import "./stack.scss";
@@ -9,11 +9,12 @@ import webpack from "../../assets/logos/webpack.svg";
 import naver from "../../assets/logos/naver.png";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-
+  isPressed?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({children}) => {
-  return <button className="button">{children}</button>
+const Button: FC<ButtonProps> = ({children, onClick, isPressed}) => {
+
+  return <button className={`button ${isPressed ? "button_pressed" : ""}`} onClick={onClick}>{children}</button>
 }
 
 interface DividerProps {
@@ -23,25 +24,38 @@ interface DividerProps {
 const Divider: FC<DividerProps> = () => <div className="divider"/>
 
 const StackPage: FC = () => {
+  const [category, setCategory] = useState(
+    "all",
+  );
   
-  const handleClick = () => {
-    console.log("click")
+  const handleClick = (category: string, reset?: boolean) => {
+    return () => setCategory(reset ? "all" : category)
   }
 
+  const getFilteredCardsList = useMemo(() => {
+    if(category === "all"){
+      return mockCardData;
+    }
+    return mockCardData.filter(({category: eachCategory}) => {
+      return eachCategory === category;
+    })
+  },[category])
+  
   return(
     <div className="wrapper">
       <section className="page_section">
         <div className="button_container">
-          {buttonData.map(({key, value}) => {
-            return <Button key={key}>{value}</Button>
+          {buttonData.map(({key, value}, index) => {
+            const needReset = category === key;
+            return <Button key={`${key}::${index}`} onClick={handleClick(key, needReset)} isPressed={needReset}>{value}</Button>
           })}
         </div>
         <Divider/>
         <article className="card_article">
           <div className="card_wrapper">
-            {mockCardData.map((data, index) => {
+            {getFilteredCardsList.map((data, index) => {
               const { imageSrc, companyName, companyLink, stackLogos } = data;
-              console.log({imageSrc})
+
               return (
                 <StackCard
                   key={`${companyName}$::${index}`}
@@ -62,60 +76,74 @@ const StackPage: FC = () => {
 
 export default StackPage;
 
+const categoryMap = {
+  it: "IT/통신",
+  food: "푸드테크",
+  financial: "금융/보험",
+  service: "서비스업",
+  fashion: "패션",
+  ai: "인공지능",
+  health: "헬스케어",
+  manufacture: "제조",
+  edu: "교육",
+  medi: "의료",
+  realestate: "부동산/인테리어",
+}
+
+const { it, food, financial, realestate, service, fashion, ai, health, manufacture, edu, medi} = categoryMap;
 
 const buttonData = [
   {
-    key: "IT/통신",
-    value: "IT/통신"
+    key: "it",
+    value: it
   },
   {
-    key: "푸드테크",
-    value: "푸드테크"
+    key: "food",
+    value: food,
   },
   {
-    key: "금융/보험",
-    value: "금융/보험"
+    key: "financial",
+    value: financial
   },
   {
-    key: "부동산/인테리어",
-    value: "부동산/인테리어",
+    key: "realestate",
+    value: realestate,
   },
   {
-    key: "푸드테크",
-    value: "푸드테크",
+    key: "service",
+    value: service,
   },
   {
-    key: "서비스업",
-    value: "서비스업",
+    key: "fashion",
+    value: fashion,
   },
   {
-    key: "패션",
-    value: "패션",
+    key: "ai",
+    value: ai,
   },
   {
-    key: "인공지능",
-    value: "인공지능",
+    key: "health",
+    value: health,
   },
   {
-    key: "헬스케어",
-    value: "헬스케어",
+    key: "manufacture",
+    value: manufacture,
   },
   {
-    key: "제조업",
-    value: "제조업",
+    key: "edu",
+    value: edu
   },
   {
-    key: "교육업",
-    value: "교육업"
-  },
-  {
-    key: "의료",
-    value: "의료"
+    key: "medi",
+    value: medi
   },
 ]
 
-const mockCardData: StackCardProps[] = [
+const mockCardData: (StackCardProps & {
+  category: string;
+})[]   = [
   {
+    category: "it",
     companyName: "네이버",
     companyLink: "https://naver.com",
     imageSrc: naver,
@@ -129,6 +157,7 @@ const mockCardData: StackCardProps[] = [
     ]
   },
   {
+    category: "it",
     companyName: "네이버",
     companyLink: "https://naver.com",
     imageSrc: naver,
@@ -146,6 +175,7 @@ const mockCardData: StackCardProps[] = [
     ]
   },
   {
+    category: "health",
     companyName: "네이버",
     companyLink: "https://naver.com",
     imageSrc: naver,
@@ -162,6 +192,7 @@ const mockCardData: StackCardProps[] = [
     ]
   },
   {
+    category: "financial",
     companyName: "네이버",
     companyLink: "https://naver.com",
     imageSrc: naver,
@@ -178,6 +209,7 @@ const mockCardData: StackCardProps[] = [
     ]
   },
   {
+    category: "food",
     companyName: "네이버",
     companyLink: "https://naver.com",
     imageSrc: naver,
