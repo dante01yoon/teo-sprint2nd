@@ -1,75 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import url(common.css);
 
-li {
-  list-style: none;
-}
-
-.mb-2 {
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-}
-
-
-.mr-2 {
-  margin-right: 4px;
-}
-
-.mr-3 {
-    display: flex;
-}
-
-.mr-3-txt {
-    width: 60px;
-}
-
-.mt-30 {
-  margin-top: 3rem;
-}
-
-.mb-30 {
-  margin-bottom: 3rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-}
-
-p {
-  font-size: 1.1rem;
-}
-
-h2,
-p {
-  font-weight: 700;
-}
-
-.container {
+#personal {
   padding: 20px;
-}
-
-.flex {
-  display: flex;
-}
-
-.language-list ul {
-  overflow: hidden;
-}
-
-.language-list ul li {
-  float: left;
-}
-.language-list ul li a {
-  display: block;
-  width: 80px;
-  height: 80px;
-}
-.language-list ul li a img {
-  width: 100%;
-  height: 100%;
 }
 
 .skills {
@@ -85,6 +17,12 @@ p {
   border: 1px solid #dedede;
   text-align: center;
   cursor: pointer;
+  padding: 5px;
+  background: rgb(240, 240, 240);
+  transition-duration: 1s;
+}
+.skills .skill-item:hover {
+  background: #fff;
 }
 .skills .skill-item label {
   position: absolute;
@@ -102,25 +40,50 @@ p {
   width: 80px;
   height: 80px;
 }
-
-.language-list ul {
-  width: 880px;
+.language-list {
   overflow: hidden;
+  width: 880px;
+}
+.language-list ul {
   display: flex;
   gap: 2rem;
-}
+  position: relative;
+  z-index: 99;
 
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-800px);
-  }
+  /* animation: slide1 12s alternate 1s infinite; */
 }
 
 .language-list ul li {
-  animation: slide 30s infinite;
+  text-align: center;
+}
+
+.language-list ul li a {
+  display: block;
+  color: #333;
+}
+
+.language-list ul li a img {
+  width: 80px;
+  height: 80px;
+}
+
+@keyframes slide1 {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -130%;
+  }
+}
+@keyframes slide2 {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -130%;
+  }
 }
 
 @media (max-width: 768px) {

@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Row, Col, Card, Button, Tag } from "antd";
-import { HeartTwoTone, ShareAltOutlined } from '@ant-design/icons';
+import { Layout, Button, Tag } from "antd";
 import { observer } from "mobx-react";
 import store from "./store/store";
 import "./RecommendPage.css";
+import Col from "antd/es/grid/col";
 import { devStackList, descriptionList } from "./store/data";
 import { DevStack } from "./store/types";
+import { HeartTwoTone, LinkOutlined } from "@ant-design/icons";
 
 const RecommendPage: React.FC = observer(() => {
   const { recommendList, devStack, setRecommendList } = store;
@@ -20,44 +21,50 @@ const RecommendPage: React.FC = observer(() => {
     (item) => item.id === devStack
   );
 
-  const detailViewClicked = (id: number) => {
+  const roadMapViewButtonClicked = (id: number) => {
     navigate(`/roadmap/${id}`);
   };
 
+  const shareBtnClicked = () => {
+    alert("share");
+  };
+  const likeBtnClicked = () => {
+    alert("like");
+  };
+
   return (
-    <div className="container">
+    <div id="recommend">
+      <h2>나에게 맞는 추천 로드맵은 어느것 일까요?</h2>
       <Tag className="tag" color={tag?.color}>
         {tag?.title}
       </Tag>
-      <h1>나에게 맞는 추천 로드맵은 어느것 일까요?</h1>
-      <div>
-        <Row gutter={16}>
-          {recommendList.map((item) => {
-            const title = [
-              <span key={item.id} className="user-name">{item.userName}</span>,
-              " 님의 ",
-              descriptionList[item.description],
-              " 로드맵",
-            ];
-            return (
-                <Col key={item.id} span={12} className="card-container">
-                <Card title={title}
-                actions={[
-                    
-                ]}
-                >
-                  <div className="count-box">
-                    <p className="count"> <HeartTwoTone twoToneColor="#eb2f96"/>{item.favorite}</p>
-                    <p className="count"><ShareAltOutlined />{item.share}</p>
-                  </div>
-                  <Button onClick={detailViewClicked.bind(this, item.id)}>
-                    보러 가기
-                  </Button>
-                </Card>
-                </Col>
-            );
-          })}
-        </Row>
+      <div className="flex">
+        {recommendList.map((item) => (
+          <div className="recommend-item" key={item.id}>
+            <div className="header">
+              <span className="name">{item.userName}</span>님의
+              <br />
+              <span className="title">
+                {descriptionList[item.description]} 로드맵
+              </span>
+            </div>
+
+            <div className="meta">
+              <Button className="likeCnt" onClick={likeBtnClicked}>
+                <HeartTwoTone twoToneColor="#eb2f96" />
+                {item.favorite}
+              </Button>
+              <Button className="shareCnt" onClick={shareBtnClicked}>
+                <LinkOutlined />
+                {item.share}
+              </Button>
+            </div>
+
+            <Button type="primary" onClick={roadMapViewButtonClicked.bind(this, item.id)}>
+              보러 가기
+            </Button>
+          </div>
+        ))}
       </div>
     </div>
   );

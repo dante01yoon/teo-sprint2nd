@@ -1,28 +1,45 @@
-* {
-    margin: 0;
-    padding: 0;
+@import url(common.css);
+
+#recommend {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#recommend h2 {
+  margin-bottom: 3rem;
+}
+#recommend .flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#recommend .recommend-item {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
 }
 
-.container {
-    padding: 20px;
+#recommend .recommend-item .header {
+  font-weight: bold;
+  font-size: 16pt;
+  text-align: center;
 }
 
-.tag{
-    border-radius: 10px;
-}
-.user-name {
-    color:cornflowerblue;
+#recommend .recommend-item .header .name {
+  color:#2db7f5;
 }
 
-.count {
-    font-size: 0.8em;
-    padding-left: 1rem;
+#recommend .recommend-item .meta {
+  margin: 2rem 0;
+}
+#recommend .recommend-item .meta button {
+  border: none;
+}
+#recommend .recommend-item .meta span {
+  display: inline-block;
+  cursor: pointer;
 }
 
-.count-box {
-    display: flex;
-}
-
-.card-container {
-    margin-bottom: 1rem;
+#recommend .recommend-item .meta span.likeCnt {
+  margin-right: 20px;
 }

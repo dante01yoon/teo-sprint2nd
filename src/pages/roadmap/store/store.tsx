@@ -12,7 +12,7 @@ class Store {
     constructor(){
         makeAutoObservable(this)
     }
-
+    
     setPosition = (value: string) => {
         this.position = value;
     }
