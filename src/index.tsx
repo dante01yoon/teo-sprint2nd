@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
-import Statistics from "./pages/statistics/Statistics";
+import Statistics from "./pages/statistics";
 import reportWebVitals from "./reportWebVitals";
 import PersonalPage from "./pages/roadmap/PersonalPage";
 import RecommendPage from "./pages/roadmap/RecommendPage";
