@@ -3,6 +3,10 @@ html, body {
     background: #f0f2f5;
 }
 
+body {
+    background-color: #f0f2f5 !important;
+}
+
 #root {
     padding: 0 1rem 1rem 1.5rem;
 }
@@ -32,6 +36,10 @@ li {
 
 .mb-30 {
     margin-bottom: 3rem;
+}
+
+.h-35 {
+    height: 35px;
 }
 
 h2 {
