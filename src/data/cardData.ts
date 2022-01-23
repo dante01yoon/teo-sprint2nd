@@ -47,6 +47,15 @@ import skelterlabs from "../assets/logos/skelterlabs.png";
 import healingpaper from "../assets/logos/gangnam.png";
 import hwahae from "../assets/logos/hwahae.png";
 import musinsa from "../assets/logos/musinsa.png";
+import samsung from "../assets/logos/samsung.png";
+import lg from "../assets/logos/lg.png";
+import freewheelin from "../assets/logos/freewheelin.png";
+import jaranda from "../assets/logos/jaranda.png";
+import lunit from "../assets/logos/lunit.png";
+import deepbio from "../assets/logos/deepbio.png";
+import hyperconnect from "../assets/logos/hyperconnect.png";
+
+
 
 
 
@@ -278,295 +287,96 @@ const mockCardData: (StackCardProps & {
     companyName: "카카오",
     companyLink: "https://www.kakaocorp.com/",
     imageSrc: kakao,
-
     stackLogos: [
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-
-      },
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
     ]
   },
   {
     id: nanoid().slice(0,6),
     category: "it",
     companyName: "라인",
-    companyLink: "https://naver.com",
+    companyLink: "https://line.me/ko/",
     imageSrc: line,
     stackLogos: [
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-
-      },
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
+    ]
+  },
+  {
+    id: nanoid().slice(0,6),
+    category: "it",
+    companyName: "하이퍼커넥트",
+    companyLink: "https://hyperconnect.com/",
+    imageSrc: hyperconnect,
+    stackLogos: [
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
     ]
   },
   {
     id: nanoid().slice(0,6),
     category: "food",
     companyName: "쿠팡이츠",
-    companyLink: "https://naver.com",
+    companyLink: "https://www.coupangeats.com/",
     imageSrc: coupangeats,
     stackLogos: [
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-
-      },
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
     ]
   },
   {
     id: nanoid().slice(0,6),
     category: "food",
     companyName: "우아한 형제들",
-    companyLink: "https://naver.com",
+    companyLink: "https://www.woowahan.com/",
     imageSrc: wowbrothers,
     stackLogos: [
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-      },
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
     ]
   },
   {
     id: nanoid().slice(0,6),
     category: "food",
     companyName: "마켓컬리",
-    companyLink: "https://naver.com",
+    companyLink: "https://www.kurly.com/",
     imageSrc: marketkurly,
     stackLogos: [
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-      },
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
     ]
   },
   {
     id: nanoid().slice(0,6),
     category: "financial",
     companyName: "카사",
-    companyLink: "https://naver.com",
+    companyLink: "https://www.kasa.co.kr/",
     imageSrc: kasa,
     stackLogos: [
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-
-      },
-      {
-        imageSrc: slack,
-        stackName: "slack",
-        description: "슬랙(Slack)은 스튜어트 버터필드가 만든 클라우드 기반 팀 협업 도구이다",
-        nationalCount: 30,
-      },
-      {
-        imageSrc: typescript,
-        stackName: "typescript",
-        description: "타입스크립트(TypeScript)는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 타입스크립트에서 자신이 원하는 타입을 정의하고 프로그래밍을 하면 자바스크립트로 컴파일되어 실행할 수 있다.",
-        nationalCount: 30,
-      },
-      {
-        imageSrc: webpack,
-        stackName: "webpack",
-        description: "웹팩(Webpack 또는 webpack)은 오픈 소스 자바스크립트(JS) 모듈 번들러이다.주로 자바스크립트(JS)를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다.",
-        nationalCount: 30,
-      },
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
     ]
   },
   {
@@ -827,6 +637,104 @@ const mockCardData: (StackCardProps & {
     companyName: "무신사",
     companyLink: "https://www.musinsa.com/app/",
     imageSrc: musinsa,
+    stackLogos: [
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
+    ]
+  },
+  {
+    id: nanoid().slice(0,6),
+    category: "fashion",
+    companyName: "무신사",
+    companyLink: "https://www.musinsa.com/app/",
+    imageSrc: musinsa,
+    stackLogos: [
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
+    ]
+  },
+  {
+    id: nanoid().slice(0,6),
+    category: "manufacture",
+    companyName: "삼성전자",
+    companyLink: "https://www.samsung.com/sec/",
+    imageSrc: samsung,
+    stackLogos: [
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
+    ]
+  },
+  {
+    id: nanoid().slice(0,6),
+    category: "manufacture",
+    companyName: "LG전자",
+    companyLink: "https://www.lge.co.kr/",
+    imageSrc: lg,
+    stackLogos: [
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
+    ]
+  },
+  {
+    id: nanoid().slice(0,6),
+    category: "edu",
+    companyName: "프리윌린",
+    companyLink: "https://www.mathflat.com/",
+    imageSrc: freewheelin,
+    stackLogos: [
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
+    ]
+  },
+  {
+    id: nanoid().slice(0,6),
+    category: "edu",
+    companyName: "자란다",
+    companyLink: "https://jaranda.kr/",
+    imageSrc: jaranda,
+    stackLogos: [
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
+    ]
+  },
+  {
+    id: nanoid().slice(0,6),
+    category: "medi",
+    companyName: "루닛",
+    companyLink: "lunit.io/ko",
+    imageSrc: lunit,
+    stackLogos: [
+      stackData.typescript,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.docker,
+    ]
+  },
+  {
+    id: nanoid().slice(0,6),
+    category: "medi",
+    companyName: "딥바이오",
+    companyLink: "http://www.deepbio.co.kr/",
+    imageSrc: deepbio,
     stackLogos: [
       stackData.typescript,
       stackData.aws,

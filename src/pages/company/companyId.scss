@@ -22,7 +22,7 @@
 }
 
 .company_divider {
-  background-color: #EEE9E9;
+  background-color: #d9d9d9;
   width: 100%;
   height: 2px;
 }
@@ -86,7 +86,7 @@
   flex-flow: column nowrap;
   gap: 48px;
   padding: 24px;
-  min-height: 360px;
+  min-height: 480px;
 }
 .company_stack_information_main {
   display: flex;
@@ -125,7 +125,6 @@
 .company_stack_information_national_count_box {
   display: flex;
   gap: 24px;
-  margin-top: 48px;
   font-size: 16px;
 }
 
@@ -136,12 +135,7 @@
 
   &:nth-of-type(2) {
     color: #096DD9;
-    margin-left: 24px;
   }
-}
-
-.company_stack_salary_wrapper {
-  margin-top: 100px;
 }
 
 .company_stack_national {
@@ -162,6 +156,7 @@
 
   .company_stack_article {
     flex-flow: row wrap;
+    justify-content: center;
   }
 
   .stack_card_container {
@@ -170,6 +165,11 @@
 
   .company_chart_article {
     padding: 0;
+  }
+
+  .company_stack_information_wrapper {
+    gap: 12px;
+    min-height: 360px;
   }
 
   .company_stack_information_image {
