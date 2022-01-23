@@ -34,7 +34,7 @@ const RecommendPage: React.FC = observer(() => {
     return (
         <div id="recommend" className="container page-wrapper">
             <div className="box mb-2">
-                <h2>나에게 맞는 추천 로드맵은 어느것 일까요?</h2>
+                <h2 className="bold font-size-1-5">나에게 맞는 추천 로드맵은 어느것 일까요?</h2>
                 <Tag className="tag" color={tag?.color}>
                     {tag?.title}
                 </Tag>

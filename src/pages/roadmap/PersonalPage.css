@@ -1,8 +1,5 @@
 @import url(common.css);
 
-#personal {
-}
-
 .skills {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -23,6 +20,12 @@
 
 .skills .skill-item:hover {
     background: #fff;
+}
+
+.skills .skill-item .title {
+    display: block;
+    font-weight: 700;
+    margin-top: 1rem;
 }
 
 .skills .skill-item label {
@@ -68,6 +71,15 @@
 .language-list ul li a img {
     width: 80px;
     height: 80px;
+}
+
+.language-list ul li a .title {
+    margin-top: 1rem;
+    display: block;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .mr-3 {
