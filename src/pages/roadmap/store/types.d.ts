@@ -5,7 +5,7 @@ export interface Node {
 export interface Recommend  {
     id: number,
     userName: string,
-    description: object,
+    description: number,
     favorite: number,
     share: number,
     nodes: Array<Node>,
@@ -23,4 +23,5 @@ export interface Skill {
 export interface DevStack {
     id: number,
     title: string,
+    color: string,
 }

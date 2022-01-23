@@ -15,7 +15,7 @@ ReactDOM.render(
             <Route path="/" element={<App />}/>
             <Route path="/personal" element={<PersonalPage/>}/>
             <Route path="/recommend" element={<RecommendPage/>}/>
-            <Route path="/roadmap" element={<RoadmapPage/>}/>
+            <Route path="/roadmap/:id" element={<RoadmapPage/>}/>
             
         </Routes>
     </BrowserRouter>

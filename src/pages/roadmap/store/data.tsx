@@ -14,6 +14,14 @@ import python from "../assets/logos/python.png";
 import go from "../assets/logos/go.png";
 import android from "../assets/logos/android.png";
 
+export const descriptionList: Array<string> = [
+    "기초부터 탄탄한",
+    "숨겨왔던",
+    "비밀스러운",
+    "알고싶은",
+    "완벽한",
+];
+
 export const initRecommendList: Array<Recommend> = [
   {
     id: 0,
@@ -21,7 +29,7 @@ export const initRecommendList: Array<Recommend> = [
     favorite: 200,
     share: 60,
     nodes: [{}],
-    description: {},
+    description: 0,
     develop: 0, 
     years: 7,
   },
@@ -31,7 +39,7 @@ export const initRecommendList: Array<Recommend> = [
     favorite: 130,
     share: 45,
     nodes: [{}],
-    description: {},
+    description: 1,
     develop: 1, 
     years: 10,
   },
@@ -41,7 +49,7 @@ export const initRecommendList: Array<Recommend> = [
     favorite: 120,
     share: 77,
     nodes: [{}],
-    description: {},
+    description: 2,
     develop: 0, 
     years: 3,
   },
@@ -51,7 +59,7 @@ export const initRecommendList: Array<Recommend> = [
     favorite: 160,
     share: 58,
     nodes: [{}],
-    description: {},
+    description: 3,
     develop: 1, 
     years: 3,
   },
@@ -61,7 +69,7 @@ export const initRecommendList: Array<Recommend> = [
     favorite: 160,
     share: 58,
     nodes: [{}],
-    description: {},
+    description: 4,
     develop: 2,
     years: 7,
   },
@@ -71,7 +79,7 @@ export const initRecommendList: Array<Recommend> = [
     favorite: 178,
     share: 25,
     nodes: [{}],
-    description: {},
+    description: 1,
     develop: 1,
     years: 2,
   },
@@ -81,7 +89,7 @@ export const initRecommendList: Array<Recommend> = [
     favorite: 124,
     share: 29,
     nodes: [{}],
-    description: {},
+    description: 2,
     develop: 2,
     years: 5,
   },
@@ -165,13 +173,16 @@ export const devStackList: Array<DevStack> = [
   {
     id: 0,
     title: "FRONTEND",
+    color: "#f50",
   },
   {
     id: 1,
     title: "BACKEND",
+    color: "#2db7f5",
   },
   {
     id: 2,
     title: "DEVOPS",
+    color: "#87d068",
   },
 ]

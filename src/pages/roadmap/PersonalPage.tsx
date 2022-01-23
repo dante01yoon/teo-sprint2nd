@@ -2,22 +2,21 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Input, Button, Select } from "antd";
 import { observer } from "mobx-react";
+import Checkbox from "antd/lib/checkbox/Checkbox";
 import store from "./store/store";
 import "./PersonalPage.css";
 import { skillList as orgSkillList, devStackList } from "./store/data";
-import Checkbox from "antd/lib/checkbox/Checkbox";
-import { Skill, DevStack } from "./store/types";
+import { Skill } from "./store/types";
 
 const PersonalPage: React.FC = observer(() => {
   const {
-    setPosition,
     setYears,
     skillList,
     devStack,
     setSkillList,
     setDevStack,
   } = store;
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleOnClickBtn = () => {
     const years = document.getElementById("years") as HTMLInputElement;

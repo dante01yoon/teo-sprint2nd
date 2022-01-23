@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.tag{
+    border-radius: 10px;
+}
+
+.card {
+    display: flex;
+}
+
+.user-name {
+    color:cornflowerblue;
+}
+
+.count {
+    font-size: 0.8em;
+}
+
+.count-box {
+    display: flex;
+}
