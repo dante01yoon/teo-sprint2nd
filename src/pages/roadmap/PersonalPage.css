@@ -1,0 +1,123 @@
+@import url(common.css);
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    gap: 1rem;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.skills .skill-item {
+    position: relative;
+    border: 1px solid #dedede;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    background: rgb(240, 240, 240);
+    transition-duration: 1s;
+}
+
+.skills .skill-item:hover {
+    background: #fff;
+}
+
+.skills .skill-item .title {
+    display: block;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.skills .skill-item label {
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.skills .skill-item label:after {
+    display: none;
+}
+
+.skills img {
+    width: 80px;
+    height: 80px;
+}
+
+.language-list {
+    overflow: hidden;
+}
+
+.language-list ul {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    position: relative;
+    z-index: 99;
+
+    /* animation: slide1 12s alternate 1s infinite; */
+}
+
+.language-list ul li {
+    text-align: center;
+}
+
+.language-list ul li a {
+    display: block;
+    color: #333;
+}
+
+.language-list ul li a img {
+    width: 80px;
+    height: 80px;
+}
+
+.language-list ul li a .title {
+    margin-top: 1rem;
+    display: block;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.mr-3 {
+    display: flex;
+}
+
+.mr-3-txt {
+    width: 4rem;
+}
+
+#years {
+    position: relative;
+}
+
+@keyframes slide1 {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -130%;
+    }
+}
+
+@keyframes slide2 {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -130%;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column-reverse;
+    }
+}
+
