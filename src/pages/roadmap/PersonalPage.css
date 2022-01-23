@@ -2,7 +2,7 @@
 
 .skills {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
     gap: 1rem;
     max-height: 200px;
     overflow-y: scroll;
@@ -52,6 +52,7 @@
 
 .language-list ul {
     display: flex;
+    overflow-x: auto;
     gap: 2rem;
     position: relative;
     z-index: 99;
