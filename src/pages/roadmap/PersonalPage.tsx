@@ -20,9 +20,6 @@ const PersonalPage: React.FC = observer(() => {
   let navigate = useNavigate();
 
   const handleOnClickBtn = () => {
-    const position = document.getElementById("position") as HTMLInputElement;
-    setPosition(position.value);
-
     const years = document.getElementById("years") as HTMLInputElement;
     setYears(Number(years.value));
 
@@ -45,42 +42,7 @@ const PersonalPage: React.FC = observer(() => {
               {orgSkillList.map((item: Skill) => (
                 <li key={`language-list_${item.id}`}>
                   <a href="#">
-                    <img src={`icons/${item.path}`} alt={item.title} />
-                  </a>
-                </li>
-              ))}
-              {orgSkillList.map((item: Skill) => (
-                <li key={`language-list_${item.id}`}>
-                  <a href="#">
-                    <img src={`icons/${item.path}`} alt={item.title} />
-                  </a>
-                </li>
-              ))}
-              {orgSkillList.map((item: Skill) => (
-                <li key={`language-list_${item.id}`}>
-                  <a href="#">
-                    <img src={`icons/${item.path}`} alt={item.title} />
-                  </a>
-                </li>
-              ))}
-              {orgSkillList.map((item: Skill) => (
-                <li key={`language-list_${item.id}`}>
-                  <a href="#">
-                    <img src={`icons/${item.path}`} alt={item.title} />
-                  </a>
-                </li>
-              ))}
-              {orgSkillList.map((item: Skill) => (
-                <li key={`language-list_${item.id}`}>
-                  <a href="#">
-                    <img src={`icons/${item.path}`} alt={item.title} />
-                  </a>
-                </li>
-              ))}
-              {orgSkillList.map((item: Skill) => (
-                <li key={`language-list_${item.id}`}>
-                  <a href="#">
-                    <img src={`icons/${item.path}`} alt={item.title} />
+                    <img src={item.path} alt={item.title} />
                   </a>
                 </li>
               ))}
@@ -94,8 +56,8 @@ const PersonalPage: React.FC = observer(() => {
           <h2>관심 직무를 선택하고</h2>
           <p className="description mb-30">학습할 기술을 추천받아보세요.</p>
 
-          {/* <Input placeholder="직무" id="position" className="mb-2" /> */}
-          <p>직무 : </p>
+          <div className="mr-3">
+          <p className="mr-3-txt">직무 : </p>
           <Select
             className="mb-2"
             defaultValue={devStack}
@@ -107,9 +69,12 @@ const PersonalPage: React.FC = observer(() => {
               </Select.Option>
             ))}
           </Select>
+          </div>
 
-          <Input placeholder="n년" id="years" className="mb-2" />
-
+          <div className="mr-3">
+            <p className="mr-3-txt">연차 : </p>
+            <Input placeholder="n년" id="years" className="mb-2" type="number"/>
+          </div>
           <Button
             type="primary"
             onClick={handleOnClickBtn}
@@ -130,7 +95,7 @@ const PersonalPage: React.FC = observer(() => {
               >
                 <Checkbox checked={item.checked} />
                 <div className="img">
-                  <img src={`icons/${item.path}`} alt={item.title} />
+                  <img src={item.path} alt={item.title} />
                 </div>
                 <span className="title">{item.title}</span>
               </div>

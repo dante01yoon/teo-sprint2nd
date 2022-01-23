@@ -1,4 +1,18 @@
 import { Recommend, Skill, DevStack } from "./types";
+import react from "../assets/logos/react.png";
+import nodejs from "../assets/logos/node-js.png";
+import angular from "../assets/logos/angular.png";
+import slack from "../assets/logos/slack-logo.png";
+import typescript from "../assets/logos/typescript.png";
+import c from "../assets/logos/c.png";
+import php from "../assets/logos/php.png";
+import graphql from "../assets/logos/graphql.png";
+import memcached from "../assets/logos/memcached.png";
+import elasticsearch from "../assets/logos/elasticsearch.png";
+import java from "../assets/logos/java.png";
+import python from "../assets/logos/python.png";
+import go from "../assets/logos/go.png";
+import android from "../assets/logos/android.png";
 
 export const initRecommendList: Array<Recommend> = [
   {
@@ -77,18 +91,74 @@ export const skillList: Array<Skill> = [
   {
     id: 0,
     title: "react",
-    path: "react.png",
+    path: react,
   },
   {
     id: 1,
     title: "angularJS",
-    path: "angular.png",
+    path: angular,
   },
   {
     id: 2,
     title: "node-js",
-    path: "node-js.png",
+    path: nodejs,
+  },
+  {
+    id: 3,
+    title: "slack",
+    path: slack,
+  },
+  {
+    id: 4,
+    title: "typescript",
+    path: typescript,
+  },
+  {
+    id: 5,
+    title: "c++",
+    path: c,
+  },
+  {
+    id: 6,
+    title: "php",
+    path: php,
+  },
+  {
+    id: 7,
+    title: "graphql",
+    path: graphql,
+  },
+  {
+    id: 8,
+    title: "memcached",
+    path: memcached,
+  },
+  {
+    id: 9,
+    title: "elastic-search",
+    path: elasticsearch,
+  },
+  {
+    id: 10,
+    title: "java",
+    path: java,
+  },
+  {
+    id: 11,
+    title: "python",
+    path: python,
+  },
+  {
+    id: 12,
+    title: "go",
+    path: go,
+  },
+  {
+    id: 13,
+    title: "android",
+    path: android,
   }
+
 ];
 
 export const devStackList: Array<DevStack> = [
