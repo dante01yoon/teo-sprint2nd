@@ -16,13 +16,6 @@ enum Analysis {
 	Used = 'used',
 }
 
-enum Cards {
-	Rank1 = 'rank1',
-	Rank2 = 'rank2',
-	Rank3 = 'rank3',
-	Rank4 = 'rank4',
-}
-
 const LIME = [
 	'#4F6D22',
 	'#5E8424',
