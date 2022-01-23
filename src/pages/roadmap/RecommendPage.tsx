@@ -1,73 +1,75 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { Layout, Button, Tag } from "antd";
-import { observer } from "mobx-react";
+import React, {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
+import {Layout, Button, Tag} from "antd";
+import {observer} from "mobx-react";
 import store from "./store/store";
 import "./RecommendPage.css";
 import Col from "antd/es/grid/col";
-import { devStackList, descriptionList } from "./store/data";
-import { DevStack } from "./store/types";
-import { HeartTwoTone, LinkOutlined } from "@ant-design/icons";
+import {devStackList, descriptionList} from "./store/data";
+import {DevStack} from "./store/types";
+import {HeartTwoTone, LinkOutlined} from "@ant-design/icons";
 
 const RecommendPage: React.FC = observer(() => {
-  const { recommendList, devStack, setRecommendList } = store;
-  const navigate = useNavigate();
+    const {recommendList, devStack, setRecommendList} = store;
+    const navigate = useNavigate();
 
-  useEffect(() => {
-    setRecommendList();
-  }, []);
+    useEffect(() => {
+        setRecommendList();
+    }, []);
 
-  const tag: DevStack | undefined = devStackList.find(
-    (item) => item.id === devStack
-  );
+    const tag: DevStack | undefined = devStackList.find(
+        (item) => item.id === devStack
+    );
 
-  const roadMapViewButtonClicked = (id: number) => {
-    navigate(`/roadmap/${id}`);
-  };
+    const roadMapViewButtonClicked = (id: number) => {
+        navigate(`/roadmap/${id}`);
+    };
 
-  const shareBtnClicked = () => {
-    alert("share");
-  };
-  const likeBtnClicked = () => {
-    alert("like");
-  };
+    const shareBtnClicked = () => {
+        alert("share");
+    };
+    const likeBtnClicked = () => {
+        alert("like");
+    };
 
-  return (
-    <div id="recommend">
-      <h2>나에게 맞는 추천 로드맵은 어느것 일까요?</h2>
-      <Tag className="tag" color={tag?.color}>
-        {tag?.title}
-      </Tag>
-      <div className="flex">
-        {recommendList.map((item) => (
-          <div className="recommend-item" key={item.id}>
-            <div className="header">
-              <span className="name">{item.userName}</span>님의
-              <br />
-              <span className="title">
+    return (
+        <div id="recommend" className="container page-wrapper">
+            <div className="box mb-2">
+                <h2>나에게 맞는 추천 로드맵은 어느것 일까요?</h2>
+                <Tag className="tag" color={tag?.color}>
+                    {tag?.title}
+                </Tag>
+            </div>
+            <div className="flex">
+                {recommendList.map((item) => (
+                    <div className="recommend-item" key={item.id}>
+                        <div className="header">
+                            <span className="name">{item.userName}</span>님의
+                            <br/>
+                            <span className="title">
                 {descriptionList[item.description]} 로드맵
               </span>
-            </div>
+                        </div>
 
-            <div className="meta">
-              <Button className="likeCnt" onClick={likeBtnClicked}>
-                <HeartTwoTone twoToneColor="#eb2f96" />
-                {item.favorite}
-              </Button>
-              <Button className="shareCnt" onClick={shareBtnClicked}>
-                <LinkOutlined />
-                {item.share}
-              </Button>
-            </div>
+                        <div className="meta">
+                            <Button className="likeCnt" onClick={likeBtnClicked}>
+                                <HeartTwoTone twoToneColor="#eb2f96"/>
+                                {item.favorite}
+                            </Button>
+                            <Button className="shareCnt" onClick={shareBtnClicked}>
+                                <LinkOutlined/>
+                                {item.share}
+                            </Button>
+                        </div>
 
-            <Button type="primary" onClick={roadMapViewButtonClicked.bind(this, item.id)}>
-              보러 가기
-            </Button>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+                        <Button type="primary" onClick={roadMapViewButtonClicked.bind(this, item.id)}>
+                            보러 가기
+                        </Button>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 });
 
 export default RecommendPage;

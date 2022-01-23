@@ -1,49 +1,100 @@
+html, body {
+    height: 100%;
+    background: #f0f2f5;
+}
+
+#root {
+    padding: 0 1rem 1rem 1.5rem;
+}
+
 * {
     margin: 0;
     padding: 0;
-  }
-  
-  li {
+}
+
+li {
     list-style: none;
-  }
-  
-  .mb-2 {
+}
+
+.mb-2 {
     margin-bottom: 1rem;
-  }
-  
-  .mr-2 {
+}
+
+.mr-2 {
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
-  }
-  
-  .mt-30 {
-    margin-top: 3rem;
-  }
-  
-  .mb-30 {
+}
+
+.mt-10 {
+    margin-top: 1rem;
+}
+
+.mb-30 {
     margin-bottom: 3rem;
-  }
-  
-  h2 {
+}
+
+h2 {
     font-size: 1.5rem;
     margin: 1rem 0;
-  }
-  
-  p {
+}
+
+p {
     font-size: 1.1rem;
-  }
-  
-  h2,
-  p {
+}
+
+h2,
+p {
     font-weight: 700;
-  }
-  
-  .flex {
+}
+
+.flex {
     display: flex;
-  }
-  
-  .block {
+    gap: 1rem;
+}
+
+.block {
     display: block;
-  }
-  
+}
+
+.box {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #dedede;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-wrapper {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    #root {
+        padding: 1rem 1rem 2rem 1.5rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .page-wrapper {
+        margin-top: 0;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+

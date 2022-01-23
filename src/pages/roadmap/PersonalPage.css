@@ -1,70 +1,73 @@
 @import url(common.css);
 
 #personal {
-  padding: 20px;
 }
 
 .skills {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  max-height: 200px;
-  overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-height: 200px;
+    overflow-y: scroll;
 }
 
 .skills .skill-item {
-  position: relative;
-  border: 1px solid #dedede;
-  text-align: center;
-  cursor: pointer;
-  padding: 5px;
-  background: rgb(240, 240, 240);
-  transition-duration: 1s;
+    position: relative;
+    border: 1px solid #dedede;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    background: rgb(240, 240, 240);
+    transition-duration: 1s;
 }
+
 .skills .skill-item:hover {
-  background: #fff;
+    background: #fff;
 }
+
 .skills .skill-item label {
-  position: absolute;
-  top: -3px;
-  right: -1px;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
+
 .skills .skill-item label:after {
-  display: none;
+    display: none;
 }
 
 .skills img {
-  width: 80px;
-  height: 80px;
+    width: 80px;
+    height: 80px;
 }
-.language-list {
-  overflow: hidden;
-  width: 880px;
-}
-.language-list ul {
-  display: flex;
-  gap: 2rem;
-  position: relative;
-  z-index: 99;
 
-  /* animation: slide1 12s alternate 1s infinite; */
+.language-list {
+    overflow: hidden;
+}
+
+.language-list ul {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    z-index: 99;
+
+    /* animation: slide1 12s alternate 1s infinite; */
 }
 
 .language-list ul li {
-  text-align: center;
+    text-align: center;
 }
 
 .language-list ul li a {
-  display: block;
-  color: #333;
+    display: block;
+    color: #333;
 }
 
 .language-list ul li a img {
-  width: 80px;
-  height: 80px;
+    width: 80px;
+    height: 80px;
 }
 
 .mr-3 {
@@ -76,27 +79,28 @@
 }
 
 @keyframes slide1 {
-  0% {
-    left: 0;
-  }
+    0% {
+        left: 0;
+    }
 
-  100% {
-    left: -130%;
-  }
+    100% {
+        left: -130%;
+    }
 }
-@keyframes slide2 {
-  0% {
-    left: 0;
-  }
 
-  100% {
-    left: -130%;
-  }
+@keyframes slide2 {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -130%;
+    }
 }
 
 @media (max-width: 768px) {
-  .flex {
-    flex-direction: column-reverse;
-  }
+    .flex {
+        flex-direction: column-reverse;
+    }
 }
 
