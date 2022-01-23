@@ -22,7 +22,11 @@ class Store {
     }
 
     setRecommendList = () => {
-        this.recommendList = initRecommendList;
+        this.recommendList = initRecommendList.filter((item) => {
+            if(item.develop === this.devStack){
+                return item
+            }
+        });
     }
 
     setSkillList = (id: number) => {
