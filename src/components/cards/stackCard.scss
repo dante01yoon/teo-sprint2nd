@@ -1,0 +1,64 @@
+.card_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(292px, 1fr));
+  gap: 24px;
+  padding: 24px;
+}
+
+.card_container {
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translate(0, -4px);
+    box-shadow: 5px 5px 15px 5px #B5B5B520;
+  }
+}
+
+.card_image_box {
+  position: relative;
+  text-align: center;
+  height: 182px;
+}
+
+.card_image {
+  position: absolute;
+  top: 50%;
+  object-fit: contain;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+}
+
+.card_name_container {
+  padding: 24px;
+}
+
+.card_company_name {
+  color: #000;
+  opacity: 0.85;
+}
+
+.card_company_link {
+  display: inline-block;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.45;
+}
+
+.card_stack_container {
+  display: flex;
+  gap: 24px;
+  padding: 14px;
+}
+
+.card_stack {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
