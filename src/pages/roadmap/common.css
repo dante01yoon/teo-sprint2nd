@@ -7,10 +7,13 @@ h2 {
     margin: 1rem 0;
 }
 
-#root {
-    padding: 0 1rem 1rem 1.5rem;
-    background-color: #f0f2f5 !important;
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
 }
 
 .mb-2 {
