@@ -1,3 +1,5 @@
+import { FlowGraphDatum } from "@ant-design/graphs";
+
 export interface Node {
     
 }
@@ -8,7 +10,7 @@ export interface Recommend  {
     description: number,
     favorite: number,
     share: number,
-    nodes: Array<Node>,
+    nodes: FlowGraphDatum,
     develop: number, //0: FE, 1: BE, 2: DevOps
     years: number,
 }

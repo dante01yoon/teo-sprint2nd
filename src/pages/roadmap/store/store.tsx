@@ -6,13 +6,13 @@ class Store {
     position: string = '';
     years: number = 0;
     devStack: number = 0;
-    recommendList: Array<Recommend> = [];
+    recommendList: Array<Recommend> = initRecommendList;
     skillList: Array<Skill> = skillList;
 
     constructor(){
         makeAutoObservable(this)
     }
-    
+
     setPosition = (value: string) => {
         this.position = value;
     }

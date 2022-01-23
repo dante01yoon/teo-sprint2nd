@@ -5,49 +5,15 @@ import {FlowGraphDatum, RadialTreeGraph} from "@ant-design/graphs";
 import "./RoadmapPage.css";
 import store from './store/store';
 import {descriptionList} from "./store/data";
+import { Recommend } from "./store/types";
 
 const RoadmapPage: React.FC = observer(() => {
     const {recommendList} = store;
+    const { id } = useParams();
+    const currentItem = recommendList.find(item => item.id === Number(id)) ?? {} as Recommend;
+  
     const DemoRadialTreeGraph = () => {
-        const data = {
-            nodes: [],
-            edges: [],
-            id: "FrontEnd",
-            value: "FrontEnd",
-            children: [
-                {
-                    id: "cs",
-                    value: "cs",
-                    children: [],
-                },
-                {
-                    id: "html",
-                    value: "html",
-                    children: [],
-                },
-                {
-                    id: "css",
-                    value: "css",
-                    children: [
-                        {
-                            id: "css framework",
-                            value: "framework",
-                        },
-                    ],
-                },
-                {
-                    id: "JavaScript",
-                    value: "JavaScript",
-                    children: [
-                        {
-                            id: "javaScript framework",
-                            value: "framework",
-                        },
-                    ],
-                },
-            ],
-        } as FlowGraphDatum;
-
+        const data: FlowGraphDatum = currentItem?.nodes; 
         const config = {
             edgeCfg: {
                 type: "cubic",
@@ -66,10 +32,6 @@ const RoadmapPage: React.FC = observer(() => {
 
         return <RadialTreeGraph {...config} data={data}/>;
     };
-
-    const {id} = useParams();
-
-    const currentItem = recommendList.find(item => item.id === Number(id))
 
     return (
         <div id="roadMap" className="container page-wrapper">

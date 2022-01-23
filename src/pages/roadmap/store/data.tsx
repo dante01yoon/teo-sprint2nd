@@ -13,13 +13,14 @@ import java from "../assets/logos/java.png";
 import python from "../assets/logos/python.png";
 import go from "../assets/logos/go.png";
 import android from "../assets/logos/android.png";
+import { FlowGraphDatum } from "@ant-design/graphs";
 
 export const descriptionList: Array<string> = [
-    "기초부터 탄탄한",
-    "숨겨왔던",
-    "비밀스러운",
-    "알고싶은",
-    "완벽한",
+  "기초부터 탄탄한",
+  "숨겨왔던",
+  "비밀스러운",
+  "알고싶은",
+  "완벽한",
 ];
 
 export const initRecommendList: Array<Recommend> = [
@@ -28,9 +29,46 @@ export const initRecommendList: Array<Recommend> = [
     userName: "테오",
     favorite: 200,
     share: 60,
-    nodes: [{}],
+    nodes: {
+      nodes: [],
+      edges: [],
+      id: "FrontEnd",
+      value: "FrontEnd",
+      children: [
+        {
+          id: "cs",
+          value: "cs",
+          children: [],
+        },
+        {
+          id: "html",
+          value: "html",
+          children: [],
+        },
+        {
+          id: "css",
+          value: "css",
+          children: [
+            {
+              id: "css framework",
+              value: "framework",
+            },
+          ],
+        },
+        {
+          id: "JavaScript",
+          value: "JavaScript",
+          children: [
+            {
+              id: "javaScript framework",
+              value: "framework",
+            },
+          ],
+        },
+      ],
+    } as FlowGraphDatum,
     description: 0,
-    develop: 0, 
+    develop: 0,
     years: 7,
   },
   {
@@ -38,9 +76,46 @@ export const initRecommendList: Array<Recommend> = [
     userName: "설아아빠",
     favorite: 130,
     share: 45,
-    nodes: [{}],
+    nodes: {
+      nodes: [],
+      edges: [],
+      id: "BackEnd",
+      value: "BackEnd",
+      children: [
+        {
+          id: "Java",
+          value: "Java",
+          children: [],
+        },
+        {
+          id: "Relation DB",
+          value: "Relation DB",
+          children: [
+            {
+              id: "MySQL",
+              value: "MySQL",
+            },
+          ],
+        },
+        {
+          id: "Python",
+          value: "Python",
+          children: [],
+        },
+        {
+          id: "NoSQL",
+          value: "NoSQL",
+          children: [
+            {
+              id: "MongoDB",
+              value: "MongoDB",
+            },
+          ],
+        },
+      ],
+    } as FlowGraphDatum,
     description: 1,
-    develop: 1, 
+    develop: 1,
     years: 10,
   },
   {
@@ -48,9 +123,58 @@ export const initRecommendList: Array<Recommend> = [
     userName: "알모",
     favorite: 120,
     share: 77,
-    nodes: [{}],
+    nodes: {
+      nodes: [],
+      edges: [],
+      id: "FrontEnd",
+      value: "FrontEnd",
+      children: [
+        {
+          id: "cs",
+          value: "cs",
+          children: [],
+        },
+        {
+          id: "html",
+          value: "html",
+          children: [],
+        },
+        {
+          id: "Framwork",
+          value: "Framwork",
+          children: [
+            {
+              id: "Vue.js",
+              value: "Vue.js",
+            },
+            {
+              id: "Angular.js",
+              value: "Angular.js",
+            },
+          ],
+        },
+        {
+          id: "css",
+          value: "css",
+          children: [
+            {
+              id: "Reactstra",
+              value: "Reactstra",
+            },
+            {
+              id: "Marterial UI",
+              value: "Marterial UI",
+            },
+            {
+              id: "Tailwind CSS",
+              value: "Tailwind CSS",
+            },
+          ],
+        },
+      ],
+    } as FlowGraphDatum,
     description: 2,
-    develop: 0, 
+    develop: 0,
     years: 3,
   },
   {
@@ -58,9 +182,59 @@ export const initRecommendList: Array<Recommend> = [
     userName: "단테",
     favorite: 160,
     share: 58,
-    nodes: [{}],
+    nodes: {
+      nodes: [],
+      edges: [],
+      id: "FrontEnd",
+      value: "FrontEnd",
+      children: [
+        {
+          id: "API",
+          value: "API",
+          children: [
+            {
+              id: "REST",
+              value: "REST",
+            },
+            {
+              id: "JSON APIs",
+              value: "SON APIs",
+            },
+          ],
+        },
+        {
+          id: "cs",
+          value: "cs",
+          children: [],
+        },
+        {
+          id: "security",
+          value: "Security",
+          children: [
+            {
+              id: "HTTPS",
+              value: "HTTPS",
+            },
+            {
+              id: "CORS",
+              value: "CORS",
+            },
+          ],
+        },
+        {
+          id: "Search Engine",
+          value: "Search Engine",
+          children: [
+            {
+              id: "Elasticsearch",
+              value: "Elasticsearch",
+            },
+          ],
+        },
+      ],
+    } as FlowGraphDatum,
     description: 3,
-    develop: 1, 
+    develop: 1,
     years: 3,
   },
   {
@@ -68,7 +242,44 @@ export const initRecommendList: Array<Recommend> = [
     userName: "홀리몰리",
     favorite: 160,
     share: 58,
-    nodes: [{}],
+    nodes: {
+      nodes: [],
+      edges: [],
+      id: "FrontEnd",
+      value: "FrontEnd",
+      children: [
+        {
+          id: "cs",
+          value: "cs",
+          children: [],
+        },
+        {
+          id: "html",
+          value: "html",
+          children: [],
+        },
+        {
+          id: "css",
+          value: "css",
+          children: [
+            {
+              id: "css framework",
+              value: "framework",
+            },
+          ],
+        },
+        {
+          id: "JavaScript",
+          value: "JavaScript",
+          children: [
+            {
+              id: "javaScript framework",
+              value: "framework",
+            },
+          ],
+        },
+      ],
+    } as FlowGraphDatum,
     description: 4,
     develop: 2,
     years: 7,
@@ -78,7 +289,44 @@ export const initRecommendList: Array<Recommend> = [
     userName: "이엘로",
     favorite: 178,
     share: 25,
-    nodes: [{}],
+    nodes: {
+      nodes: [],
+      edges: [],
+      id: "FrontEnd",
+      value: "FrontEnd",
+      children: [
+        {
+          id: "cs",
+          value: "cs",
+          children: [],
+        },
+        {
+          id: "html",
+          value: "html",
+          children: [],
+        },
+        {
+          id: "css",
+          value: "css",
+          children: [
+            {
+              id: "css framework",
+              value: "framework",
+            },
+          ],
+        },
+        {
+          id: "JavaScript",
+          value: "JavaScript",
+          children: [
+            {
+              id: "javaScript framework",
+              value: "framework",
+            },
+          ],
+        },
+      ],
+    } as FlowGraphDatum,
     description: 1,
     develop: 1,
     years: 2,
@@ -88,7 +336,44 @@ export const initRecommendList: Array<Recommend> = [
     userName: "데비니",
     favorite: 124,
     share: 29,
-    nodes: [{}],
+    nodes: {
+      nodes: [],
+      edges: [],
+      id: "FrontEnd",
+      value: "FrontEnd",
+      children: [
+        {
+          id: "cs",
+          value: "cs",
+          children: [],
+        },
+        {
+          id: "html",
+          value: "html",
+          children: [],
+        },
+        {
+          id: "css",
+          value: "css",
+          children: [
+            {
+              id: "css framework",
+              value: "framework",
+            },
+          ],
+        },
+        {
+          id: "JavaScript",
+          value: "JavaScript",
+          children: [
+            {
+              id: "javaScript framework",
+              value: "framework",
+            },
+          ],
+        },
+      ],
+    } as FlowGraphDatum,
     description: 2,
     develop: 2,
     years: 5,
@@ -165,8 +450,7 @@ export const skillList: Array<Skill> = [
     id: 13,
     title: "android",
     path: android,
-  }
-
+  },
 ];
 
 export const devStackList: Array<DevStack> = [
@@ -185,4 +469,4 @@ export const devStackList: Array<DevStack> = [
     title: "DEVOPS",
     color: "#87d068",
   },
-]
+];
