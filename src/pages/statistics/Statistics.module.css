@@ -54,12 +54,7 @@ button {
 	height: 194px;
 	margin: 15px auto 0;
 	perspective: 500px;
-}
-
-@media (max-width: 800px) {
-	.infoCard {
-		width: 100%;
-	}
+	overflow: hidden;
 }
 
 .infoCardWrapper {
@@ -238,4 +233,17 @@ button[name='used'].active {
 
 .cardBody {
 	padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+	.infoCard {
+		width: 100%;
+		height: 198px;
+	}
+	.infoCard .top {
+		margin-bottom: 1rem;
+	}
+	.infoCard .bottom {
+		flex-direction: column;
+	}
 }
