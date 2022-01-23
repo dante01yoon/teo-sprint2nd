@@ -1,53 +1,145 @@
-import React from 'react';
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Layout, Input, Button } from 'antd';
-import { observer } from 'mobx-react';
-import store from './store/store';
+import { Input, Button, Select } from "antd";
+import { observer } from "mobx-react";
+import store from "./store/store";
+import "./PersonalPage.css";
+import { skillList as orgSkillList, devStackList } from "./store/data";
+import Checkbox from "antd/lib/checkbox/Checkbox";
+import { Skill, DevStack } from "./store/types";
 
 const PersonalPage: React.FC = observer(() => {
-    const { setPosition, setYears } = store;
-    let nevigate = useNavigate();
+  const {
+    setPosition,
+    setYears,
+    skillList,
+    devStack,
+    setSkillList,
+    setDevStack,
+  } = store;
+  let navigate = useNavigate();
 
-    const handleOnClickBtn = () => {
-        
-        const postion = document.getElementById("postion") as HTMLInputElement;
-        setPosition(postion.value);
+  const handleOnClickBtn = () => {
+    const position = document.getElementById("position") as HTMLInputElement;
+    setPosition(position.value);
 
-        const years = document.getElementById("years") as HTMLInputElement;
-        setYears(Number(years.value));
+    const years = document.getElementById("years") as HTMLInputElement;
+    setYears(Number(years.value));
 
-        nevigate("/recommend");
+    navigate("/recommend");
+  };
 
-    }
+  const skillItemClicked = (id: number) => setSkillList(id);
+  const devStackClicked = (id: number) => setDevStack(id);
 
-    return (
-        <Layout>
-            <Layout.Content>
-                <div>
-                    <h2>지금 이시간에는...</h2>
-                    <p>20개가 넘는 기업들이 다음 기술을 통해 세상을 변화시키고 있어요!</p>
-                    <div>
-                        skill...
-                    </div>
+  return (
+    <div className="container">
+      <div>
+        <div>
+          <h2 className="title">지금 이시간에는...</h2>
+          <p className="description">
+            20개가 넘는 기업들이 다음 기술을 통해 세상을 변화시키고 있어요!
+          </p>
+          <div className="language-list">
+            <ul>
+              {orgSkillList.map((item: Skill) => (
+                <li key={`language-list_${item.id}`}>
+                  <a href="#">
+                    <img src={`icons/${item.path}`} alt={item.title} />
+                  </a>
+                </li>
+              ))}
+              {orgSkillList.map((item: Skill) => (
+                <li key={`language-list_${item.id}`}>
+                  <a href="#">
+                    <img src={`icons/${item.path}`} alt={item.title} />
+                  </a>
+                </li>
+              ))}
+              {orgSkillList.map((item: Skill) => (
+                <li key={`language-list_${item.id}`}>
+                  <a href="#">
+                    <img src={`icons/${item.path}`} alt={item.title} />
+                  </a>
+                </li>
+              ))}
+              {orgSkillList.map((item: Skill) => (
+                <li key={`language-list_${item.id}`}>
+                  <a href="#">
+                    <img src={`icons/${item.path}`} alt={item.title} />
+                  </a>
+                </li>
+              ))}
+              {orgSkillList.map((item: Skill) => (
+                <li key={`language-list_${item.id}`}>
+                  <a href="#">
+                    <img src={`icons/${item.path}`} alt={item.title} />
+                  </a>
+                </li>
+              ))}
+              {orgSkillList.map((item: Skill) => (
+                <li key={`language-list_${item.id}`}>
+                  <a href="#">
+                    <img src={`icons/${item.path}`} alt={item.title} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex mt-30">
+        <div className="mr-2">
+          <h2>관심 직무를 선택하고</h2>
+          <p className="description mb-30">학습할 기술을 추천받아보세요.</p>
+
+          {/* <Input placeholder="직무" id="position" className="mb-2" /> */}
+          <p>직무 : </p>
+          <Select
+            className="mb-2"
+            defaultValue={devStack}
+            onChange={devStackClicked}
+          >
+            {devStackList.map((item) => (
+              <Select.Option key={item.id} value={item.id}>
+                {item.title}
+              </Select.Option>
+            ))}
+          </Select>
+
+          <Input placeholder="n년" id="years" className="mb-2" />
+
+          <Button
+            type="primary"
+            onClick={handleOnClickBtn}
+            className="ant-btn-block"
+          >
+            내 추천 기술 보러 가기
+          </Button>
+        </div>
+
+        <div>
+          <h2>내가 알고 있는 기술</h2>
+          <div className="skills">
+            {skillList.map((item: Skill) => (
+              <div
+                className="skill-item"
+                key={item.id}
+                onClick={skillItemClicked.bind(this, item.id)}
+              >
+                <Checkbox checked={item.checked} />
+                <div className="img">
+                  <img src={`icons/${item.path}`} alt={item.title} />
                 </div>
-
-                <div>
-                    <h2>관심 직무를 선택하고</h2>
-                    <p>학습할 기술을 추천받아보세요.</p>
-                    <Input placeholder="직무" id="postion"/>
-                    <Input placeholder="n년" id="years"/>
-                    <Button type="primary" onClick={handleOnClickBtn}>내 추천 기술 보러 가기</Button>
-                </div>
-
-                <div>
-                    <h2>내가 알고 있는 기술</h2>
-                    <div>
-                        skill list...
-                    </div>
-                </div>
-            </Layout.Content>
-        </Layout>
-    )
+                <span className="title">{item.title}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 });
 
 export default PersonalPage;
