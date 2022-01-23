@@ -1,12 +1,20 @@
-import React from "react";
-import style from "./CardBig.module.css";
+import React from 'react';
+import cx from 'classnames';
+
+import style from './CardBig.module.css';
 
 type CardBigProps = {
-  children: React.ReactNode;
+	children: React.ReactNode;
+	className?: string;
+	key?: string | number;
 };
 
-function CardBig({ children }: CardBigProps) {
-  return <div className={style.CardBig}>{children}</div>;
+function CardBig({ key, className, children }: CardBigProps) {
+	return (
+		<div key={key} className={cx(style.CardBig, className)}>
+			{children}
+		</div>
+	);
 }
 
 export default CardBig;

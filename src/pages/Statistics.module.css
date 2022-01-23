@@ -1,153 +1,239 @@
 /* ----- reset start ----- */
 h3,
 p {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 
 button {
-  border: 0;
-  background: 0;
-  padding: 0;
-  cursor: pointer;
+	border: 0;
+	background: 0;
+	padding: 0;
+	cursor: pointer;
 }
 /* ----- reset end ----- */
 
 .contents {
-  background-color: #f0f2f5;
-  min-height: 100vh;
+	background-color: #f0f2f5;
+	min-height: 100vh;
 }
 
 .sectionTitle {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+	font-size: 1.5rem;
+	margin-bottom: 20px;
 }
 
 .infomation,
 .analysis {
-  padding: 2rem 1rem;
-  margin: 0 auto;
+	padding: 2rem 1rem;
+	margin: 0 auto;
 
-  /* TODO: 반응형 작업하기 */
-  max-width: 720px;
+	/* TODO: 반응형 작업하기 */
+	max-width: 720px;
 }
 
 /* [섹션 1] */
 .infoCards {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: -15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: -15px;
+
+	perspective: 600px;
 }
 
 .infoCard {
-  width: 350px;
-  margin: 15px auto 0;
+	width: 350px;
+	height: 161px;
+	margin: 15px auto 0;
+	perspective: 500px;
+}
+
+.infoCardWrapper {
+	width: 100%;
+	height: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.infoCardItem {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.infoCardWrapper.isFlipped,
+.infoCardItem.back {
+	transform: rotateX(180deg);
 }
 
 .infoCard .top,
-.infoCard .bottom,
-.infoCard .bottom ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.infoCard .bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .infoCard .top {
-  margin-bottom: 20px;
+	margin-bottom: 2rem;
+}
+
+.infoCard .topRight {
+	margin-left: 1rem;
+	width: 100%;
+}
+
+.infoCard .tagList {
+	width: 100%;
+	max-width: 186px;
+	overflow-x: hidden;
+	position: relative;
+}
+
+.infoCard .tagList::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 10px;
+	height: 100%;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(37.5%, #fff),
+		to(rgba(255, 255, 255, 0))
+	);
+	z-index: 1;
+	content: '';
+	background: -webkit-linear-gradient(
+		right,
+		rgb(255 255 255 / 50%) 5%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: -o-linear-gradient(
+		right,
+		rgb(255 255 255 / 50%) 5%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: linear-gradient(
+		to left,
+		rgb(255 255 255 / 50%) 5%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+
+.infoCard .bottom ul {
+	display: flex;
+	align-items: center;
+	width: max-content;
 }
 
 .infoCard .desc {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.85rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 0.85rem;
 }
 
 .infoCard .desc strong {
-  font-size: 1.17rem;
+	font-size: 1.17rem;
+}
+
+.infoCard .desc + .desc {
+	margin-top: 0.5rem;
 }
 
 .infoCard .label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 0.8rem;
-  background-color: #57b0f9;
-  border-radius: 20px;
-  padding: 0 6px;
-  height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 0.8rem;
+	background-color: #57b0f9;
+	border-radius: 20px;
+	padding: 0 6px;
+	height: 20px;
 }
 
 .infoCard .label + .label {
-  margin-left: 4px;
+	margin-left: 4px;
 }
 
 .infoCard button {
-  display: flex;
-  align-items: flex-end;
-  color: #8c8c8c;
-  font-weight: 700;
+	display: flex;
+	align-items: flex-end;
+	color: #8c8c8c;
+	font-weight: 600;
+}
+
+.infoCard button:hover {
+	font-weight: 700;
 }
 
 .infoCard button span {
-  padding-bottom: 2px;
-  padding-right: 3px;
+	padding-bottom: 2px;
+	padding-right: 3px;
+	pointer-events: none;
 }
 
 /* [섹션 2] */
 .card {
-  background-color: white;
-  border-radius: 20px;
+	background-color: white;
+	border-radius: 20px;
 }
 
 .cardHeader {
-  height: 56px;
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+	height: 56px;
+	padding: 0 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .cardButtons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .cardButton + .cardButton {
-  margin-left: 20px;
+	margin-left: 20px;
 }
 
 .cardButton .active {
-  font-weight: 700;
+	font-weight: 700;
 }
 
-button[name="interested"].active {
-  color: #4f6d22;
+button[name='interested'].active {
+	color: #4f6d22;
 }
 
-button[name="satisfied"].active {
-  color: #d66b00;
+button[name='satisfied'].active {
+	color: #d66b00;
 }
 
-button[name="awared"].active {
-  color: #1a4b93;
+button[name='awared'].active {
+	color: #1a4b93;
 }
 
-button[name="used"].active {
-  color: #412499;
+button[name='used'].active {
+	color: #412499;
 }
 
 .cardBody {
-  padding: 1.5rem;
+	padding: 1.5rem;
 }
