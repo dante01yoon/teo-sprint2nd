@@ -1,12 +1,10 @@
-import { FC, HTMLAttributes, useCallback, useEffect, useMemo, useState } from "react";
-import StackCard, { StackCardProps } from "../../components/cards/StackCard";
+import { FC, HTMLAttributes, useMemo, useState } from "react";
+import { Outlet, useParams, useNavigate } from "react-router-dom";
+import StackCard from "../../components/cards/StackCard";
+import { mockCardData } from "../../data/cardData";
 
 import "./stack.scss";
 
-import slack from "../../assets/logos/slack-logo.svg";
-import typescript from "../../assets/logos/typescript.svg";
-import webpack from "../../assets/logos/webpack.svg";
-import naver from "../../assets/logos/naver.png";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   isPressed?: boolean;
@@ -27,7 +25,9 @@ const StackPage: FC = () => {
   const [category, setCategory] = useState(
     "all",
   );
-  
+  const {id} = useParams();
+  const navigate = useNavigate();
+
   const handleClick = (category: string, reset?: boolean) => {
     return () => setCategory(reset ? "all" : category)
   }
@@ -42,34 +42,44 @@ const StackPage: FC = () => {
   },[category])
   
   return(
-    <div className="wrapper">
-      <section className="page_section">
-        <div className="button_container">
-          {buttonData.map(({key, value}, index) => {
-            const needReset = category === key;
-            return <Button key={`${key}::${index}`} onClick={handleClick(key, needReset)} isPressed={needReset}>{value}</Button>
-          })}
-        </div>
-        <Divider/>
-        <article className="card_article">
-          <div className="card_wrapper">
-            {getFilteredCardsList.map((data, index) => {
-              const { imageSrc, companyName, companyLink, stackLogos } = data;
-
-              return (
-                <StackCard
-                  key={`${companyName}$::${index}`}
-                  imageSrc={imageSrc ?? ""}
-                  companyLink={companyLink}
-                  companyName={companyName}
-                  stackLogos={stackLogos}
-                />
-              )
+    <>
+    {id ?
+      <Outlet/>
+      :
+      <div className="wrapper">
+        <section className="page_section">
+          <div className="button_container">
+            {buttonData.map(({key, value}, index) => {
+              const needReset = category === key;
+              return <Button key={`${key}::${index}`} onClick={handleClick(key, needReset)} isPressed={needReset}>{value}</Button>
             })}
           </div>
-        </article>
-      </section>
-    </div>
+          <Divider/>
+          <article className="card_article">
+            <div className="card_wrapper">
+              {getFilteredCardsList.map((data, index) => {
+                const { imageSrc, companyName, companyLink, stackLogos, id } = data;
+                const handleMoveTo = () => {
+                  navigate(`/company/${id}`)
+                }
+                
+                return (
+                  <StackCard
+                    key={`${companyName}$::${index}`}
+                    imageSrc={imageSrc ?? ""}
+                    companyLink={companyLink}
+                    companyName={companyName}
+                    stackLogos={stackLogos}
+                    onClick={handleMoveTo}
+                  />
+                )
+              })}
+            </div>
+          </article>
+        </section>
+      </div>
+      }
+    </>
   )
 }
 
@@ -137,92 +147,4 @@ const buttonData = [
     key: "medi",
     value: medi
   },
-]
-
-const mockCardData: (StackCardProps & {
-  category: string;
-})[]   = [
-  {
-    category: "it",
-    companyName: "네이버",
-    companyLink: "https://naver.com",
-    imageSrc: naver,
-    stackLogos: [
-      {
-        imageSrc: typescript,
-      },
-      {
-        imageSrc: webpack,
-      }
-    ]
-  },
-  {
-    category: "it",
-    companyName: "네이버",
-    companyLink: "https://naver.com",
-    imageSrc: naver,
-
-    stackLogos: [
-      {
-        imageSrc: slack,
-      },
-      {
-        imageSrc: typescript,
-      },
-      {
-        imageSrc: webpack,
-      }
-    ]
-  },
-  {
-    category: "health",
-    companyName: "네이버",
-    companyLink: "https://naver.com",
-    imageSrc: naver,
-    stackLogos: [
-      {
-        imageSrc: slack,
-      },
-      {
-        imageSrc: typescript,
-      },
-      {
-        imageSrc: webpack,
-      }
-    ]
-  },
-  {
-    category: "financial",
-    companyName: "네이버",
-    companyLink: "https://naver.com",
-    imageSrc: naver,
-    stackLogos: [
-      {
-        imageSrc: slack,
-      },
-      {
-        imageSrc: typescript,
-      },
-      {
-        imageSrc: webpack,
-      }
-    ]
-  },
-  {
-    category: "food",
-    companyName: "네이버",
-    companyLink: "https://naver.com",
-    imageSrc: naver,
-    stackLogos: [
-      {
-        imageSrc: slack,
-      },
-      {
-        imageSrc: typescript,
-      },
-      {
-        imageSrc: webpack,
-      }
-    ]
-  }
 ]
