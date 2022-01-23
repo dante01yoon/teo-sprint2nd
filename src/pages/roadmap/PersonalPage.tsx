@@ -37,8 +37,8 @@ const PersonalPage: React.FC = observer(() => {
         <div id="personal" className="container page-wrapper">
             <div className="mb-2">
                 <div className="box">
-                    <h2 className="title">지금 이시간에는...</h2>
-                    <p className="description">
+                    <h2 className="title bold font-size-1-5">지금 이시간에는...</h2>
+                    <p className="description bold font-size-1-1">
                         20개가 넘는 기업들이 다음 기술을 통해 세상을 변화시키고 있어요!
                     </p>
                     <div className="language-list">
@@ -49,7 +49,7 @@ const PersonalPage: React.FC = observer(() => {
                                         <div>
                                             <img src={item.path} alt={item.title}/>
                                         </div>
-                                        <span className="title">{item.title}</span>
+                                        <span className="title bold">{item.title}</span>
                                     </a>
                                 </li>
                             ))}
@@ -60,14 +60,14 @@ const PersonalPage: React.FC = observer(() => {
 
             <div className="flex ">
                 <div className="box flex-grow-1">
-                    <h2>관심 직무를 선택하고</h2>
-                    <p className="description mb-30">학습할 기술을 추천받아보세요.</p>
+                    <h2 className="bold font-size-1-5">관심 직무를 선택하고</h2>
+                    <p className="description mb-30 bold font-size-1-1">학습할 기술을 추천받아보세요.</p>
 
                     <div className="flex">
-                        <p className="mr-3-txt">직무 : </p>
+                        <p className="mr-3-txt bold font-size-1-1">직무 : </p>
                         <Select
                             id="position"
-                            className="block"
+                            className="block h-35"
                             defaultValue={devStack}
                             onChange={devStackClicked}
                         >
@@ -80,7 +80,7 @@ const PersonalPage: React.FC = observer(() => {
                     </div>
 
                     <div className="flex">
-                        <p className="mr-3-txt">연차 : </p>
+                        <p className="mr-3-txt font-size-1-1 bold">연차 : </p>
                         <Input placeholder="n년" id="years" className="mb-2 h-35" type="number"/>
                     </div>
                     <Button
@@ -93,7 +93,7 @@ const PersonalPage: React.FC = observer(() => {
                 </div>
 
                 <div className="box flex-grow-1">
-                    <h2>내가 알고 있는 기술</h2>
+                    <h2 className="bold font-size-1-5">내가 알고 있는 기술</h2>
                     <div className="skills">
                         {skillList.map((item: Skill) => (
                             <div

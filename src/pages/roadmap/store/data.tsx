@@ -185,8 +185,8 @@ export const initRecommendList: Array<Recommend> = [
     nodes: {
       nodes: [],
       edges: [],
-      id: "FrontEnd",
-      value: "FrontEnd",
+      id: "BackEnd",
+      value: "BackEnd",
       children: [
         {
           id: "API",
@@ -245,8 +245,8 @@ export const initRecommendList: Array<Recommend> = [
     nodes: {
       nodes: [],
       edges: [],
-      id: "FrontEnd",
-      value: "FrontEnd",
+      id: "DevOps",
+      value: "DevOps",
       children: [
         {
           id: "cs",
@@ -254,27 +254,44 @@ export const initRecommendList: Array<Recommend> = [
           children: [],
         },
         {
-          id: "html",
-          value: "html",
-          children: [],
-        },
-        {
-          id: "css",
-          value: "css",
+          id: "Operating System",
+          value: "Operating System",
           children: [
             {
-              id: "css framework",
-              value: "framework",
+                id: "SUSE Linux",
+                value: "SUSE Linux",
+            },
+            {
+                id: "Debian",
+                value: "Debian",
             },
           ],
         },
         {
-          id: "JavaScript",
-          value: "JavaScript",
+          id: "Networking",
+          value: "Networking",
           children: [
             {
-              id: "javaScript framework",
-              value: "framework",
+              id: "Emails",
+              value: "Emails",
+            },
+            {
+              id: "SMTP",
+              value: "SMTP",
+            },
+          ],
+        },
+        {
+          id: "Web Server",
+          value: "Web Server",
+          children: [
+            {
+              id: "IIS",
+              value: "IIS",
+            },
+            {
+              id: "Nginx",
+              value: "Nginx",
             },
           ],
         },
@@ -292,36 +309,44 @@ export const initRecommendList: Array<Recommend> = [
     nodes: {
       nodes: [],
       edges: [],
-      id: "FrontEnd",
-      value: "FrontEnd",
+      id: "BackEnd",
+      value: "BackEnd",
       children: [
         {
-          id: "cs",
-          value: "cs",
-          children: [],
-        },
-        {
-          id: "html",
-          value: "html",
-          children: [],
-        },
-        {
-          id: "css",
-          value: "css",
+          id: "Caching",
+          value: "Caching",
           children: [
             {
-              id: "css framework",
-              value: "framework",
-            },
+                id: "CDN",
+                value: "CDN",
+              },
+              {
+                  id: "Server Side",
+                  value: "Server Side",
+                },
           ],
         },
         {
-          id: "JavaScript",
-          value: "JavaScript",
+          id: "Testing",
+          value: "Testing",
           children: [
             {
-              id: "javaScript framework",
-              value: "framework",
+                id: "Integration",
+                value: "Integration",
+              },
+              {
+                  id: "Unit",
+                  value: "Unit",
+                },
+        ],
+        },
+        {
+          id: "Search Engines",
+          value: "Search Engines",
+          children: [
+            {
+              id: "Elasticsearch",
+              value: "Elasticsearch",
             },
           ],
         },
@@ -339,36 +364,49 @@ export const initRecommendList: Array<Recommend> = [
     nodes: {
       nodes: [],
       edges: [],
-      id: "FrontEnd",
-      value: "FrontEnd",
+      id: "DevOps",
+      value: "DevOps",
       children: [
         {
-          id: "cs",
-          value: "cs",
-          children: [],
-        },
-        {
-          id: "html",
-          value: "html",
-          children: [],
-        },
-        {
-          id: "css",
-          value: "css",
+          id: "Language",
+          value: "Language",
           children: [
             {
-              id: "css framework",
-              value: "framework",
+                id: "Go",
+                value: "Go",
+              },
+              {
+                  id: "Rust",
+                  value: "Rust",
+                },
+          ],
+        },
+        {
+          id: "OS Concepts",
+          value: "OS Concepts",
+          children: [],
+        },
+        {
+          id: "Operating System",
+          value: "Operating System",
+          children: [
+            {
+              id: "Linux",
+              value: "Linux",
+            },
+            {
+              id: "Unix",
+              value: "Unix",
             },
           ],
         },
         {
-          id: "JavaScript",
-          value: "JavaScript",
+          id: "Testing",
+          value: "Testing",
           children: [
             {
-              id: "javaScript framework",
-              value: "framework",
+              id: "Functional Testing",
+              value: "Functional Testing",
             },
           ],
         },
