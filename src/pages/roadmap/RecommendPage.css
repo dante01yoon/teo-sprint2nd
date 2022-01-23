@@ -10,19 +10,19 @@
 .tag{
     border-radius: 10px;
 }
-
-.card {
-    display: flex;
-}
-
 .user-name {
     color:cornflowerblue;
 }
 
 .count {
     font-size: 0.8em;
+    padding-left: 1rem;
 }
 
 .count-box {
     display: flex;
+}
+
+.card-container {
+    margin-bottom: 1rem;
 }
