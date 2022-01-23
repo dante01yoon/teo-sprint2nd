@@ -78,6 +78,10 @@
     width: 4rem;
 }
 
+#years {
+    position: relative;
+}
+
 @keyframes slide1 {
     0% {
         left: 0;

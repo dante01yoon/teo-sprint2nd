@@ -55,6 +55,7 @@ p {
 
 .block {
     display: block;
+    width: 100%;
 }
 
 .box {

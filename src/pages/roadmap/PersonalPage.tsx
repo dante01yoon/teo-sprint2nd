@@ -63,11 +63,11 @@ const PersonalPage: React.FC = observer(() => {
                     <h2>관심 직무를 선택하고</h2>
                     <p className="description mb-30">학습할 기술을 추천받아보세요.</p>
 
-                    <div className="mr-3">
+                    <div className="flex">
                         <p className="mr-3-txt">직무 : </p>
                         <Select
                             id="position"
-                            className="mb-2 block"
+                            className="block"
                             defaultValue={devStack}
                             onChange={devStackClicked}
                         >
@@ -79,7 +79,7 @@ const PersonalPage: React.FC = observer(() => {
                         </Select>
                     </div>
 
-                    <div className="">
+                    <div className="flex">
                         <p className="mr-3-txt">연차 : </p>
                         <Input placeholder="n년" id="years" className="mb-2" type="number"/>
                     </div>
