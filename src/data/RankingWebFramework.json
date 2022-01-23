@@ -1,0 +1,166 @@
+{
+  "satisfied": {
+    "name": "root",
+    "children": [
+      {
+        "name": "Svelte",
+        "value": 89
+      },
+      {
+        "name": "React",
+        "value": 88
+      },
+      {
+        "name": "Vue.js",
+        "value": 85
+      },
+      {
+        "name": "Alpine.js",
+        "value": 89
+      },
+      {
+        "name": "Preact",
+        "value": 78
+      },
+      {
+        "name": "LiteElement",
+        "value": 78
+      },
+      {
+        "name": "Stimules",
+        "value": 67
+      },
+      {
+        "name": "Angular",
+        "value": 42
+      },
+      {
+        "name": "Ember",
+        "value": 27
+      }
+    ]
+  },
+  "interested": {
+    "name": "root",
+    "children": [
+      {
+        "name": "Svelte",
+        "value": 66
+      },
+      {
+        "name": "Vue.js",
+        "value": 63
+      },
+      {
+        "name": "React",
+        "value": 58
+      },
+      {
+        "name": "Preact",
+        "value": 40
+      },
+      {
+        "name": "LitElement",
+        "value": 39
+      },
+      {
+        "name": "Alpine.js",
+        "value": 38
+      },
+      {
+        "name": "Stimules",
+        "value": 27
+      },
+      {
+        "name": "Angular",
+        "value": 21
+      },
+      {
+        "name": "Ember",
+        "value": 16
+      }
+    ]
+  },
+  "used": {
+    "name": "root",
+    "children": [
+      {
+        "name": "React",
+        "value": 80
+      },
+      {
+        "name": "Angular",
+        "value": 56
+      },
+      {
+        "name": "Vue.js",
+        "value": 49
+      },
+      {
+        "name": "Svelte",
+        "value": 15
+      },
+      {
+        "name": "Preact",
+        "value": 13
+      },
+      {
+        "name": "Ember",
+        "value": 11
+      },
+      {
+        "name": "LitElement",
+        "value": 5
+      },
+      {
+        "name": "Alpine.js",
+        "value": 3
+      },
+      {
+        "name": "Stimuls",
+        "value": 1
+      }
+    ]
+  },
+  "awared": {
+    "name": "root",
+    "children": [
+      {
+        "name": "React",
+        "value": 100
+      },
+      {
+        "name": "Angular",
+        "value": 100
+      },
+      {
+        "name": "Vue.js",
+        "value": 99
+      },
+      {
+        "name": "Ember",
+        "value": 88
+      },
+      {
+        "name": "Svelte",
+        "value": 86
+      },
+      {
+        "name": "Preact",
+        "value": 77
+      },
+      {
+        "name": "Alpine.js",
+        "value": 34
+      },
+      {
+        "name": "LiteElement",
+        "value": 27
+      },
+      {
+        "name": "Stimuls",
+        "value": 17
+      }
+    ]
+  }
+}
