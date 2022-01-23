@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 import cx from "classnames";
 
-import Treemap from "../components/Treemap";
-import CardBig from "../components/CardBig";
-import InfoCard from "./InfoCard";
+import Icon, { IconType } from "../../assets/Icon";
+import Treemap from "../../components/Treemap";
+import CardBig from "../../components/CardBig";
 
-import DATA_GITHUB from "../data/RankingGithubStar.json";
-import DATA_FRAMEWORK from "../data/RankingWebFramework.json";
-import type { DataGithubItem } from "./index";
+import DATA_GITHUB from "../../data/RankingGithubStar.json";
+import DATA_FRAMEWORK from "../../data/RankingWebFramework.json";
 
 import style from "./Statistics.module.css";
+
+type DataGithubItem = {
+  id: number;
+  name: string;
+  star: number;
+  github: string;
+  tags: string[];
+};
 
 enum Analysis {
   Interested = "interested",
@@ -127,20 +134,62 @@ function Statistics() {
                   [style.isFlipped]: isCardFilpped[key],
                 })}
               >
-                {DATA_GITHUB[key].map((item: DataGithubItem, idx: number) => (
-                  <div
-                    key={item.name}
-                    className={cx(style.infoCardItem, {
-                      [style.back]: idx === 1,
-                    })}
-                  >
-                    <InfoCard
-                      item={item}
-                      key={key}
-                      handleFilpButton={handleFilpButton}
-                    />
-                  </div>
-                ))}
+                {DATA_GITHUB[key].map(
+                  (
+                    { name, id, github, star, tags }: DataGithubItem,
+                    idx: number
+                  ) => (
+                    <div
+                      key={name}
+                      className={cx(style.infoCardItem, {
+                        [style.back]: idx === 1,
+                      })}
+                    >
+                      <CardBig>
+                        <div className={style.top}>
+                          <Icon type={id} />
+
+                          <div className={style.topRight}>
+                            <p className={style.desc}>
+                              <strong>{name}</strong>
+                              <a
+                                aria-label="GitHub repository"
+                                target="_blank"
+                                rel="noreferrer"
+                                href={github}
+                              >
+                                <Icon type={IconType.Github} />
+                              </a>
+                            </p>
+                            <p className={style.desc}>
+                              <span>
+                                최근 24시간 동안
+                                <b> +{star}개</b>
+                                <br />
+                                star를 받았습니다.
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div className={style.bottom}>
+                          <div className={style.tagList}>
+                            <ul>
+                              {tags.map((tag, childIdx) => (
+                                <li key={childIdx} className={style.label}>
+                                  {tag}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          <button name={key} onClick={handleFilpButton}>
+                            <span>비슷한 프로젝트 보기</span>
+                          </button>
+                        </div>
+                      </CardBig>
+                    </div>
+                  )
+                )}
               </div>
             </li>
           ))}
