@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+import StackPage from "./company/StackPage";
+
 export type DataGithubItem = {
   id: number;
   name: string;
@@ -8,11 +9,5 @@ export type DataGithubItem = {
 };
 
 export { default } from "./Statistics";
-=======
-import StackPage from "./company/StackPage";
 
-
-export {
-  StackPage,
-}
->>>>>>> 022c825 (Update: routes 설정)
+export { StackPage };
