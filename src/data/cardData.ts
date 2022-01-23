@@ -345,8 +345,11 @@ const mockCardData: (StackCardProps & {
     imageSrc: wowbrothers,
     stackLogos: [
       stackData.typescript,
+      stackData.github,
       stackData.aws,
       stackData.react,
+      stackData.gradle,
+      stackData.slac,
       stackData.nginx,
       stackData.docker,
     ]
@@ -360,6 +363,7 @@ const mockCardData: (StackCardProps & {
     stackLogos: [
       stackData.typescript,
       stackData.aws,
+      stackData.gradle,
       stackData.react,
       stackData.nginx,
       stackData.docker,
@@ -386,11 +390,13 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://naver.com",
     imageSrc: kakaobank,
     stackLogos: [
-      stackData.typescript,
-      stackData.aws,
-      stackData.react,
       stackData.nginx,
+      stackData.aws,
+      stackData.go,
+      stackData.react,
+      stackData.typescript,
       stackData.docker,
+      stackData.slack,
     ]
   },
   {
@@ -400,11 +406,13 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://naver.com",
     imageSrc: toss,
     stackLogos: [
-      stackData.typescript,
-      stackData.aws,
       stackData.react,
-      stackData.nginx,
+      stackData.aws,
       stackData.docker,
+      stackData.nginx,
+      stackData.github,
+      stackData.typescript,
+      stackData.slack,
     ]
   },
   {
@@ -419,6 +427,9 @@ const mockCardData: (StackCardProps & {
       stackData.react,
       stackData.nginx,
       stackData.docker,
+      stackData.github,
+      stackData.slack,
+      stackData.android,
     ]
   },
   {
@@ -428,9 +439,12 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://naver.com",
     imageSrc: zigbang,
     stackLogos: [
-      stackData.typescript,
+      stackData.android,
+      stackData.github,
+      stackData.slack,
       stackData.aws,
       stackData.react,
+      stackData.typescript,
       stackData.nginx,
       stackData.docker,
     ]
@@ -442,25 +456,9 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://naver.com",
     imageSrc: dabang,
     stackLogos: [
-      stackData.typescript,
       stackData.aws,
-      stackData.react,
-      stackData.nginx,
-      stackData.docker,
-    ]
-  },
-  {
-    id: nanoid().slice(0,6),
-    category: "realestate",
-    companyName: "다방",
-    companyLink: "https://naver.com",
-    imageSrc: dabang,
-    stackLogos: [
-      stackData.typescript,
-      stackData.aws,
-      stackData.react,
-      stackData.nginx,
-      stackData.docker,
+      stackData.github,
+      stackData.android,
     ]
   },
   {
@@ -470,11 +468,8 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://naver.com",
     imageSrc: cjfoodvill,
     stackLogos: [
-      stackData.typescript,
-      stackData.aws,
-      stackData.react,
+      stackData.gradle,
       stackData.nginx,
-      stackData.docker,
     ]
   },
   {
@@ -484,11 +479,9 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://naver.com",
     imageSrc: dunkin,
     stackLogos: [
-      stackData.typescript,
       stackData.aws,
       stackData.react,
       stackData.nginx,
-      stackData.docker,
     ]
   },
   {
@@ -498,10 +491,12 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://naver.com",
     imageSrc: kakaostyle,
     stackLogos: [
-      stackData.typescript,
       stackData.aws,
       stackData.react,
+      stackData.typescript,
       stackData.nginx,
+      stackData.github,
+      stackData.go,
       stackData.docker,
     ]
   },
@@ -514,6 +509,7 @@ const mockCardData: (StackCardProps & {
     stackLogos: [
       stackData.typescript,
       stackData.aws,
+      stackData.github,
       stackData.react,
       stackData.nginx,
       stackData.docker,
@@ -530,6 +526,7 @@ const mockCardData: (StackCardProps & {
       stackData.aws,
       stackData.react,
       stackData.nginx,
+      stackData.android,
       stackData.docker,
     ]
   },
@@ -544,6 +541,7 @@ const mockCardData: (StackCardProps & {
       stackData.aws,
       stackData.react,
       stackData.nginx,
+      stackData.linux,
       stackData.docker,
     ]
   },
@@ -557,6 +555,8 @@ const mockCardData: (StackCardProps & {
       stackData.typescript,
       stackData.aws,
       stackData.react,
+      stackData.go,
+      stackData.linux,
       stackData.nginx,
       stackData.docker,
     ]
@@ -572,6 +572,8 @@ const mockCardData: (StackCardProps & {
       stackData.aws,
       stackData.react,
       stackData.nginx,
+      stackData.go,
+      stackData.android,
       stackData.docker,
     ]
   },
@@ -582,10 +584,11 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://www.naverlabs.com/",
     imageSrc: naverlabs,
     stackLogos: [
+      stackData.go,
       stackData.typescript,
-      stackData.aws,
       stackData.react,
       stackData.nginx,
+      stackData.sequelize,
       stackData.docker,
     ]
   },
@@ -596,8 +599,10 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://www.skelterlabs.com/",
     imageSrc: skelterlabs,
     stackLogos: [
+      stackData.linux,
       stackData.typescript,
       stackData.aws,
+      stackData.sequelize,
       stackData.react,
       stackData.nginx,
       stackData.docker,
@@ -610,9 +615,11 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://www.healingpaper.com/",
     imageSrc: healingpaper,
     stackLogos: [
+      stackData.react,
+      stackData.linux,
       stackData.typescript,
       stackData.aws,
-      stackData.react,
+      stackData.android,
       stackData.nginx,
       stackData.docker,
     ]
@@ -624,6 +631,23 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://www.hwahae.co.kr/",
     imageSrc: hwahae,
     stackLogos: [
+      stackData.slack,
+      stackData.android,
+      stackData.aws,
+      stackData.react,
+      stackData.nginx,
+      stackData.typescript,
+      stackData.docker,
+    ]
+  },
+  {
+    id: nanoid().slice(0,6),
+    category: "fashion",
+    companyName: "무신사",
+    companyLink: "https://www.musinsa.com/app/",
+    imageSrc: musinsa,
+    stackLogos: [
+      stackData.slack,
       stackData.typescript,
       stackData.aws,
       stackData.react,
@@ -639,23 +663,9 @@ const mockCardData: (StackCardProps & {
     imageSrc: musinsa,
     stackLogos: [
       stackData.typescript,
-      stackData.aws,
       stackData.react,
       stackData.nginx,
-      stackData.docker,
-    ]
-  },
-  {
-    id: nanoid().slice(0,6),
-    category: "fashion",
-    companyName: "무신사",
-    companyLink: "https://www.musinsa.com/app/",
-    imageSrc: musinsa,
-    stackLogos: [
-      stackData.typescript,
-      stackData.aws,
-      stackData.react,
-      stackData.nginx,
+      stackData.slack,
       stackData.docker,
     ]
   },
@@ -680,11 +690,10 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://www.lge.co.kr/",
     imageSrc: lg,
     stackLogos: [
-      stackData.typescript,
-      stackData.aws,
-      stackData.react,
+      stackData.github,
       stackData.nginx,
       stackData.docker,
+      stackData.webpack,
     ]
   },
   {
@@ -694,11 +703,10 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://www.mathflat.com/",
     imageSrc: freewheelin,
     stackLogos: [
-      stackData.typescript,
+      stackData.github,
+      stackData.gradle,
       stackData.aws,
-      stackData.react,
       stackData.nginx,
-      stackData.docker,
     ]
   },
   {
@@ -708,10 +716,9 @@ const mockCardData: (StackCardProps & {
     companyLink: "https://jaranda.kr/",
     imageSrc: jaranda,
     stackLogos: [
-      stackData.typescript,
-      stackData.aws,
-      stackData.react,
+      stackData.gradle,
       stackData.nginx,
+      stackData.typescript,
       stackData.docker,
     ]
   },
@@ -727,6 +734,8 @@ const mockCardData: (StackCardProps & {
       stackData.react,
       stackData.nginx,
       stackData.docker,
+      stackData.android,
+
     ]
   },
   {
@@ -736,8 +745,8 @@ const mockCardData: (StackCardProps & {
     companyLink: "http://www.deepbio.co.kr/",
     imageSrc: deepbio,
     stackLogos: [
+      stackData.android,
       stackData.typescript,
-      stackData.aws,
       stackData.react,
       stackData.nginx,
       stackData.docker,
