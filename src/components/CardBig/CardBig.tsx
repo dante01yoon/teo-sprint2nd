@@ -1,14 +1,12 @@
-import React from 'react';
-import style from './CardBig.module.css';
+import React from "react";
+import style from "./CardBig.module.css";
 
 type CardBigProps = {
-	children: React.ReactNode;
+  children: React.ReactNode;
 };
 
 function CardBig({ children }: CardBigProps) {
-	return <div className={style.CardBig}>{children}</div>;
+  return <div className={style.CardBig}>{children}</div>;
 }
-
-CardBig.defaultProps = {};
 
 export default CardBig;
