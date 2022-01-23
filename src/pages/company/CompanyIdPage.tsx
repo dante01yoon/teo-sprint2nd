@@ -45,7 +45,7 @@ const CompanyIdPage: FC = () => {
       <div className="company_divider" />
       <section className="company_content_section">
         <article className="company_stack_article">
-          {stackLogos.map((stackObject,index) => {
+          {stackLogos.filter(object => Boolean(object)).map((stackObject,index) => {
             const {stackName, imageSrc} = stackObject
             return (
               <CompanyStackCard 
