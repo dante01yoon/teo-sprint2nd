@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, useMemo, useState } from "react";
 import { Outlet, useParams, useNavigate } from "react-router-dom";
 import StackCard from "../../components/cards/StackCard";
-import { mockCardData } from "../../data/cardData";
+import { categoryMap, mockCardData } from "../../data/cardData";
 
 import "./stack.scss";
 
@@ -62,7 +62,7 @@ const StackPage: FC = () => {
                 const handleMoveTo = () => {
                   navigate(`/company/${id}`)
                 }
-                
+
                 return (
                   <StackCard
                     key={`${companyName}$::${index}`}
@@ -86,21 +86,8 @@ const StackPage: FC = () => {
 
 export default StackPage;
 
-const categoryMap = {
-  it: "IT/통신",
-  food: "푸드테크",
-  financial: "금융/보험",
-  service: "서비스업",
-  fashion: "패션",
-  ai: "인공지능",
-  health: "헬스케어",
-  manufacture: "제조",
-  edu: "교육",
-  medi: "의료",
-  realestate: "부동산/인테리어",
-}
-
 const { it, food, financial, realestate, service, fashion, ai, health, manufacture, edu, medi} = categoryMap;
+
 
 const buttonData = [
   {

@@ -1,0 +1,200 @@
+.company_section {
+  margin: 0 auto;
+}
+
+.company_header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+.company_header_image {
+  width: 93px;
+  object-fit: contain;
+  margin: 24px 0;
+}
+
+.company_header_aname {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.company_divider {
+  background-color: #EEE9E9;
+  width: 100%;
+  height: 2px;
+}
+
+.company_content_section {
+  position: relative;
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+}
+
+.company_stack_article {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 0 auto;
+  gap: 24px;
+  padding: 24px;
+}
+
+.company_chart_article {
+  padding: 24px;
+}
+
+.stack_card_container {
+  border-radius: 4px;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #ffffff;
+  min-width: 60px;
+  min-height: 60px;
+  border: 1px solid #D9D9D9;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: #00000050;
+}
+
+.stack_card_selected_card {
+  border: 1px solid #096DD9;
+  color: #096DD950;
+}
+
+
+.stack_card_image {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.stack_card_name {
+  font-size: 8px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.company_stack_information_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 48px;
+  padding: 24px;
+  min-height: 360px;
+}
+.company_stack_information_main {
+  display: flex;
+  gap: 24px;
+}
+
+
+.company_stack_information_image {
+  width: 156px;
+}
+
+.company_stack_information_container {
+  text-align: left;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.company_stack_information_name {
+  font-weight: 900;
+  font-size: 36px;
+  color: #000;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.company_stack_information_description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  word-break: keep-all;
+  flex: 1 0 auto;
+}
+
+.company_stack_information_national_count_box {
+  display: flex;
+  gap: 24px;
+  margin-top: 48px;
+  font-size: 16px;
+}
+
+.company_stack_information_national_count {
+  color: #000;
+  font-weight: 400;
+  opacity: 0.5;
+
+  &:nth-of-type(2) {
+    color: #096DD9;
+    margin-left: 24px;
+  }
+}
+
+.company_stack_salary_wrapper {
+  margin-top: 100px;
+}
+
+.company_stack_national {
+  text-align: center;
+  margin: 0 auto;
+
+  & > h3 {
+    font-weight: 400;
+    font-size: 20px;
+    
+  }
+}
+
+@media screen and (max-device-width: 768px) and (orientation: portrait) {
+  .company_content_section {
+    flex-flow: column nowrap;
+  }
+
+  .company_stack_article {
+    flex-flow: row wrap;
+  }
+
+  .stack_card_container {
+    flex-basis: 72px;
+  }
+
+  .company_chart_article {
+    padding: 0;
+  }
+
+  .company_stack_information_image {
+    width: 72px;
+  }
+
+  .company_stack_information_container {
+    padding: 24px 0;
+    gap: 0;
+  }
+
+  .company_stack_information_name {
+    font-size: 20px;
+  }
+
+  .company_stack_information_national_count_box {
+    font-size: 12px;
+    gap: 12px;
+  }
+
+  .company_stack_information_description {
+    font-size: 12px;
+  }
+
+  .company_stack_bar {
+    display: none;
+  }
+}

@@ -1,11 +1,16 @@
 import { FC, HTMLAttributes } from "react";
 import "./stackCard.scss";
 
-export interface StackCardProps extends HTMLAttributes<HTMLDivElement>{
+export interface StackCardProps extends HTMLAttributes<HTMLDivElement> {
   imageSrc: string;
   companyName: string;
   companyLink: string;
-  stackLogos: {imageSrc: string}[]
+  stackLogos: {
+    imageSrc: string;
+    stackName: string;
+    description: string;
+    nationalCount: number;
+  }[]
 }
 
 const StackCard: FC<StackCardProps> = ({
@@ -19,7 +24,7 @@ const StackCard: FC<StackCardProps> = ({
   return (
     <div className="card_container" {...props}>
       <div className="card_image_box">
-        <img className="card_image"  src={imageSrc}/>
+        <img className="card_image"  src={imageSrc} alt={companyName}/>
       </div>
       <div className="card_name_container">
         <div className="card_company_name">{companyName}</div> 
@@ -27,7 +32,7 @@ const StackCard: FC<StackCardProps> = ({
       </div>
       <div className="card_stack_container">
         {
-          stackLogos.map(({imageSrc},index) => {
+          stackLogos.slice(0,5).map(({imageSrc},index) => {
             return (<div 
               className="card_stack" 
               style={{
