@@ -1,10 +1,9 @@
 import React, {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
-import {Layout, Button, Tag} from "antd";
+import {Button, Tag} from "antd";
 import {observer} from "mobx-react";
 import store from "./store/store";
 import "./RecommendPage.css";
-import Col from "antd/es/grid/col";
 import {devStackList, descriptionList} from "./store/data";
 import {DevStack} from "./store/types";
 import {HeartTwoTone, LinkOutlined} from "@ant-design/icons";

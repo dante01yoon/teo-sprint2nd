@@ -9,6 +9,7 @@ import RecommendPage from './pages/roadmap/RecommendPage';
 import RoadmapPage from './pages/roadmap/RoadmapPage';
 import StackPage from "./pages/company/StackPage"
 import CompanyIdPage from "./pages/company/CompanyIdPage"
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
   <React.StrictMode>
