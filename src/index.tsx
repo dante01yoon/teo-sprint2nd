@@ -9,17 +9,20 @@ import RoadmapPage from "./pages/roadmap/RoadmapPage";
 import StackPage from "./pages/company/StackPage";
 import CompanyIdPage from "./pages/company/CompanyIdPage";
 import "antd/dist/antd.css";
+import Layout from "./components/Layout";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Statistics />} />
-        <Route path="/personal" element={<PersonalPage />} />
-        <Route path="/recommend" element={<RecommendPage />} />
-        <Route path="/roadmap/:id" element={<RoadmapPage />} />
-        <Route path="/company" element={<StackPage />}>
-          <Route path=":id" element={<CompanyIdPage />} />
+        <Route path="/" element={<Layout/>} >
+          <Route index element={<Statistics />} />
+          <Route path="personal" element={<PersonalPage />} />
+          <Route path="recommend" element={<RecommendPage />} />
+          <Route path="roadmap/:id" element={<RoadmapPage />} />
+          <Route path="company" element={<StackPage />}>
+            <Route path=":id" element={<CompanyIdPage />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
