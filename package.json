@@ -5,6 +5,7 @@
   "dependencies": {
     "@ant-design/charts": "^1.3.4",
     "@ant-design/graphs": "^1.0.6",
+    "@ant-design/plots": "^1.0.7",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -12,14 +13,11 @@
     "@types/node": "^16.11.21",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
-<<<<<<< HEAD
     "antd": "^4.18.4",
     "mobx": "^6.3.13",
     "mobx-react": "^7.2.1",
     "classnames": "^2.3.1",
-=======
     "nanoid": "^3.2.0",
->>>>>>> 022c825 (Update: routes 설정)
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
