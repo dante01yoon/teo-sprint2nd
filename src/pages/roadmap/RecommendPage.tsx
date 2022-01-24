@@ -25,10 +25,10 @@ const RecommendPage: React.FC = observer(() => {
     };
 
     const shareBtnClicked = () => {
-        alert("share");
+        alert("공유하기 - 서비스 준비중입니다.🙏");
     };
     const likeBtnClicked = () => {
-        alert("like");
+        alert("좋아요 - 서비스 준비중입니다.🙏");
     };
 
     return (
