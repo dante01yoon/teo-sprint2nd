@@ -27,3 +27,14 @@ export interface DevStack {
     title: string,
     color: string,
 }
+
+export interface StudyContentItem {
+    id: number,
+    list: Array<StudyItem>,
+}
+
+export interface StudyItem {
+    type: string,
+    link: string,
+    description: string,
+}

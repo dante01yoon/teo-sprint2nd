@@ -40,7 +40,6 @@ li {
 
 .font-size-1-5 {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
 }
 
 .font-size-1-1 {
@@ -73,19 +72,12 @@ li {
 
 .container {
     margin: 0 auto;
-}
-
-.page-wrapper {
-    height: 100%;
+    padding-bottom: 5rem;
 }
 
 @media (max-width: 768px) {
     .container {
         width: 100%;
-    }
-
-    .page-wrapper {
-        margin-top: 0;
     }
 
     .font-size-1-5 {
