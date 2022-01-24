@@ -21,10 +21,7 @@ const Layout: FC = () => {
 
 	const sidebar = () => {
 		const bar = document.querySelector(".app_global_sidebar");
-		const burger = document.querySelector(".app_global_header_hamburger");
-		burger.addEventListener("click", () => {
-			bar.classList.toggle("open_sidebar");
-		});
+		bar.classList.toggle("open_sidebar");
 	};
 
   return (
