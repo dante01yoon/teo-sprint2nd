@@ -1,17 +1,14 @@
-.wrapper {
-  height: 100%;
-}
-
 .page_section {
-  max-width: 1211px;
-  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 24px;
 }
 
 .button_container {
   display: flex;
   gap: 24px;
   overflow-x: auto;
-  padding: 24px;
 }
 
 .button {

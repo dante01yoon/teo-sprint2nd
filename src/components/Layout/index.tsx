@@ -19,13 +19,24 @@ const Layout: FC = () => {
     return () => setCurrentPath(path)
   }
 
+	const sidebar = () => {
+		const bar = document.querySelector(".app_global_sidebar");
+		const burger = document.querySelector(".app_global_header_hamburger");
+		burger.addEventListener("click", () => {
+			bar.classList.toggle("open_sidebar");
+		});
+	};
+
   return (
     <div className="app_container">
       <nav className="app_global_header">
-        <img className="app_global_header_logo" />
-        <div className="app_global_header_logo_name">
-          <Link to="/">pathfinder.dev</Link>
-        </div> 
+				<div className="app_global_header_logo_container">
+					<img className="app_global_header_logo" />
+					<div className="app_global_header_logo_name">
+						<Link to="/">pathfinder.dev</Link>
+					</div> 
+				</div>
+				<button className="app_global_header_hamburger" onClick={sidebar}><img src={menu} /></button>
       </nav>
 			<div className="app_global_sidebar">
 				<ul className="app_global_sidebar_list">
