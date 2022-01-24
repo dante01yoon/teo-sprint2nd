@@ -72,12 +72,10 @@ li {
 }
 
 .container {
-    max-width: 800px;
     margin: 0 auto;
 }
 
 .page-wrapper {
-    margin-top: 2rem;
     height: 100%;
 }
 

@@ -5,14 +5,14 @@
       "name": "Ant Design",
       "star": 92,
       "github": "https://github.com/ant-design/ant-design",
-      "tags": ["Component Tookit", "React"]
+      "tags": ["Component Toolkit", "React"]
     },
     {
       "id": 5,
       "name": "MUI",
       "star": 37,
       "github": "https://github.com/mui-org/material-ui",
-      "tags": ["Material Design", "React", "Component Tookit"]
+      "tags": ["Material Design", "React", "Component Toolkit"]
     }
   ],
   "rank2": [

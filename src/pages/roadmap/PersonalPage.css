@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
     gap: 1rem;
-    max-height: 200px;
+    max-height: 240px;
     overflow-y: scroll;
 }
 
@@ -44,10 +44,6 @@
 .skills img {
     width: 80px;
     height: 80px;
-}
-
-.language-list {
-    overflow: hidden;
 }
 
 .language-list ul {
