@@ -1,14 +1,15 @@
 .card_wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(292px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
   gap: 24px;
-  padding: 24px;
 }
 
 .card_container {
   background-color: #fff;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-flow: column nowrap;
 
   &:hover {
     transform: translate(0, -4px);
@@ -26,8 +27,8 @@
   position: absolute;
   top: 50%;
   object-fit: contain;
-  width: 120px;
-  height: 120px;
+  max-width: 120px;
+  aspect-ratio: 1/1;
   transform: translate(-50%, -50%);
 }
 
@@ -59,6 +60,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  aspect-ratio: 1/1;
 }

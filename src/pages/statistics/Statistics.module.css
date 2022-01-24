@@ -1,5 +1,4 @@
 .contents {
-	background-color: #f0f2f5;
 	min-height: 100vh;
 }
 
@@ -33,7 +32,6 @@
 	height: 194px;
 	margin: 15px auto 0;
 	perspective: 500px;
-	overflow: hidden;
 }
 
 .infoCardWrapper {
