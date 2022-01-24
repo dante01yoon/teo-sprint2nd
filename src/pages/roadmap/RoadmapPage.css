@@ -3,3 +3,11 @@
 #roadMap h2 {
   text-align: center;
 }
+
+.name {
+    color: #2db7f5;
+}
+
+.col {
+    margin-bottom: 1rem;
+}
